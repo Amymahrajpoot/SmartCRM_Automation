@@ -66,7 +66,17 @@ ${CITY_XPATH}           //input[@id="City"]
 ${CITY_TEXT}             Lahore
 ${STATE_XPATH}           //input[@id="State"]
 ${STATE_TEXT}             Lahore
+${POSTALCODE_XPATH}      //input[@id="PostalCode"]
+${POSTALCODE_TEXT}        00855
+${COUNTRY_XPATH}      //input[@id="Country"]
+${COUNTRY_TEXT}        Pakistan
+${EMIAL_OPT_OUT_XPATH}      //input[@id="HasOptedOutOfEmail"]
 
+${LAST_ACTIVITY_DATE_XPATH}     (//div[@class="ant-picker ant-picker-underlined css-xogyor css-var-_r_0_ ant-picker-css-var"])[1]
+${PREVIOUS_LAST_ACTIVITY_DATE_XPATH}        //button[@class="ant-picker-header-prev-btn"]
+${SELECT_LAST_ACTIVITY_DATE_XPATH}          //div[text()='22']
+${LAST_TRANSFER_DATE_XPATH}                 (//div[@class="ant-picker ant-picker-underlined css-xogyor css-var-_r_0_ ant-picker-css-var"])[2]
+${SELECT_LAST_TRANSFER_DATE_XPATH}          (//div[text()='5'])[3]
 
 *** Test Cases ***
 Add New Lead
@@ -78,49 +88,49 @@ Add New Lead
     Click Element    ${LEADS_XPATH}
     Click Element    ${ADD_LEAD_XPATH}
     Wait Until Element Is Visible    ${LEADS_POPUP_XPATH}      timeout=10s
-#    Click Element    ${TITLE_FIELD_XPATH}
-#    Input Text    ${TITLE_FIELD_XPATH}    ${TITLE_FIELD_TEXT}
-#    Click Element    ${FIRSTNAME_FIELD_XPATH}
-#    Input Text    ${FIRSTNAME_FIELD_XPATH}    ${FIRSTNAME_FIELD_TEXT}
-#    Click Element    ${LASTNAME_FIELD_XPATH}
-#    Input Text    ${LASTNAME_FIELD_XPATH}    ${LASTNAME_FIELD_TEXT}
-#    Click Element    ${NAME_FIELD_XPATH}
-#    Input Text    ${NAME_FIELD_XPATH}    ${NAME_FIELD_TEXT}
-#    Click Element    ${GENDER_IDENTITY_XPATH}
-#    Click Element    ${SELECT_GENDER_IDENTITY_XPATH}
-#    Click Element    ${LEAD_SOURCE_XPATH}
-#    Click Element    ${SELECT_LEAD_SOURCE_XPATH}
-#    Click Element    ${LEAD_PARTNER_ACCOUNT_XPATH}
-#    Click Element    ${SELECT_LEAD_PARTNER_ACCOUNT_XPATH}
-#
-#    Log To Console   <<<Adding Contact Information>>>
-#    Click Element    ${MOBILE_CODE_XPATH}
-#    Input Text    ${MOBILE_CODE_XPATH}      ${MOBILE_CODE_TEXT}
-#    Click Element    ${SELECT_MOBILE_CODE_XPATH}
-#    Click Element    ${MOBILE_NUMBER_XPATH}
-#    Input Text    ${MOBILE_NUMBER_XPATH}      ${MOBILE_NUMBER_TEXT}
-#    Click Element    ${EMAIL_XPATH}
-#    Input Text    ${EMAIL_XPATH}     ${EMAIL_TEXT}
-#    Click Element    ${LINKDIN_XPATH}
-#    Input Text    ${LINKDIN_XPATH}    ${LINKDIN_TEXT}
-#
-#    Log To Console   <<<Adding Company Information>>>
-#    Click Element    ${PHONE_CODE_XPATH}
-#    Input Text    ${PHONE_CODE_XPATH}      ${PHONE_CODE_TEXT}
-#    Click Element    ${SELECT_PHONE_CODE_XPATH}
-#    Click Element    ${PHONE_NUMBER_XPATH}
-#    Input Text    ${PHONE_NUMBER_XPATH}      ${PHONE_NUMBER_TEXT}
-#    Click Element    ${COMPANY_XPATH}
-#    Input Text    ${COMPANY_XPATH}     ${COMPANY_TEXT}
-#    Click Element    ${WEBSITE_XPATH}
-#    Input Text    ${WEBSITE_XPATH}     ${WEBSITE_TEXT}
-#    Click Element    ${INDUSTRY_XPATH}
-#    Click Element    ${SELECT_INDUSTRY_XPATH}
-#    Click Element    ${EMPLOYEES_XPATH}
-#
-#    FOR    ${i}    IN RANGE    5
-#        Click Element    ${EMPLOYEES_COUNTER_XPATH}
-#    END
+    Click Element    ${TITLE_FIELD_XPATH}
+    Input Text    ${TITLE_FIELD_XPATH}    ${TITLE_FIELD_TEXT}
+    Click Element    ${FIRSTNAME_FIELD_XPATH}
+    Input Text    ${FIRSTNAME_FIELD_XPATH}    ${FIRSTNAME_FIELD_TEXT}
+    Click Element    ${LASTNAME_FIELD_XPATH}
+    Input Text    ${LASTNAME_FIELD_XPATH}    ${LASTNAME_FIELD_TEXT}
+    Click Element    ${NAME_FIELD_XPATH}
+    Input Text    ${NAME_FIELD_XPATH}    ${NAME_FIELD_TEXT}
+    Click Element    ${GENDER_IDENTITY_XPATH}
+    Click Element    ${SELECT_GENDER_IDENTITY_XPATH}
+    Click Element    ${LEAD_SOURCE_XPATH}
+    Click Element    ${SELECT_LEAD_SOURCE_XPATH}
+    Click Element    ${LEAD_PARTNER_ACCOUNT_XPATH}
+    Click Element    ${SELECT_LEAD_PARTNER_ACCOUNT_XPATH}
+
+    Log To Console   <<<Adding Contact Information>>>
+    Click Element    ${MOBILE_CODE_XPATH}
+    Input Text    ${MOBILE_CODE_XPATH}      ${MOBILE_CODE_TEXT}
+    Click Element    ${SELECT_MOBILE_CODE_XPATH}
+    Click Element    ${MOBILE_NUMBER_XPATH}
+    Input Text    ${MOBILE_NUMBER_XPATH}      ${MOBILE_NUMBER_TEXT}
+    Click Element    ${EMAIL_XPATH}
+    Input Text    ${EMAIL_XPATH}     ${EMAIL_TEXT}
+    Click Element    ${LINKDIN_XPATH}
+    Input Text    ${LINKDIN_XPATH}    ${LINKDIN_TEXT}
+
+    Log To Console   <<<Adding Company Information>>>
+    Click Element    ${PHONE_CODE_XPATH}
+    Input Text    ${PHONE_CODE_XPATH}      ${PHONE_CODE_TEXT}
+    Click Element    ${SELECT_PHONE_CODE_XPATH}
+    Click Element    ${PHONE_NUMBER_XPATH}
+    Input Text    ${PHONE_NUMBER_XPATH}      ${PHONE_NUMBER_TEXT}
+    Click Element    ${COMPANY_XPATH}
+    Input Text    ${COMPANY_XPATH}     ${COMPANY_TEXT}
+    Click Element    ${WEBSITE_XPATH}
+    Input Text    ${WEBSITE_XPATH}     ${WEBSITE_TEXT}
+    Click Element    ${INDUSTRY_XPATH}
+    Click Element    ${SELECT_INDUSTRY_XPATH}
+    Click Element    ${EMPLOYEES_XPATH}
+
+    FOR    ${i}    IN RANGE    5
+        Click Element    ${EMPLOYEES_COUNTER_XPATH}
+    END
 
     Log To Console   <<<Adding Financial Information>>>
     Click Element    ${ANNUAL_REVENUE_XPATH}
@@ -144,7 +154,25 @@ Add New Lead
     Input Text    ${DESCRIPTION_XPATH}      ${DESCRIPTION_TEXT}
 
     Log To Console   <<<Adding Address & Prefrences>>>
+    Click Element    ${ADDRESS_XPATH}
+    Input Text    ${ADDRESS_XPATH}     ${ADDRESS_TEXT}
+    Click Element    ${STREET_XPATH}
+    Input Text    ${STREET_XPATH}       ${STREET_TEXT}
+    Click Element    ${CITY_XPATH}
+    Input Text    ${CITY_XPATH}       ${CITY_TEXT}
+    Click Element    ${STATE_XPATH}
+    Input Text    ${STATE_XPATH}       ${STATE_TEXT}
+    Click Element    ${POSTALCODE_XPATH}
+    Input Text    ${POSTALCODE_XPATH}       ${POSTALCODE_TEXT}
+    Click Element    ${COUNTRY_XPATH} 
+    Input Text    ${COUNTRY_XPATH}        ${COUNTRY_TEXT}
+    Click Element    ${EMIAL_OPT_OUT_XPATH}
 
-
+    Log To Console   <<<Adding Dates>>>
+    Click Element    ${LAST_ACTIVITY_DATE_XPATH}
+    Click Element    ${PREVIOUS_LAST_ACTIVITY_DATE_XPATH}
+    Click Element    ${SELECT_LAST_ACTIVITY_DATE_XPATH}
+    Click Element    ${LAST_TRANSFER_DATE_XPATH}
+    Click Element    ${SELECT_LAST_TRANSFER_DATE_XPATH}
 
     Close Browser
