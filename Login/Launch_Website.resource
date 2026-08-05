@@ -14,6 +14,7 @@ ${VALID_PASSWORD}      Bss@1234
 *** Keywords ***
 Launch Website
     [Documentation]    Opens the browser and navigates to the target website
+    Log To Console    <<<Launching Website>>>
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
     Wait Until Element Is Visible    tag:body    timeout=10s

@@ -36,7 +36,7 @@ ${PHONE_CODE_XPATH}     (//input[@class="ant-select-input"])[6]
 ${PHONE_CODE_TEXT}      92
 ${SELECT_PHONE_CODE_XPATH}     //div[@class="ant-select-item ant-select-item-option ant-select-item-option-active"]
 ${PHONE_NUMBER_XPATH}          (//input[@placeholder="Phone number"])[2]
-${PHONE_NUMBER_TEXT}       3356782211
+${PHONE_NUMBER_TEXT}       3356782
 ${COMPANY_XPATH}        //input[@id="Company"]
 ${COMPANY_TEXT}         BSS
 ${WEBSITE_XPATH}        //input[@id="Website"]
@@ -72,19 +72,30 @@ ${COUNTRY_XPATH}      //input[@id="Country"]
 ${COUNTRY_TEXT}        Pakistan
 ${EMIAL_OPT_OUT_XPATH}      //input[@id="HasOptedOutOfEmail"]
 
-${LAST_ACTIVITY_DATE_XPATH}     (//div[@class="ant-picker ant-picker-underlined css-xogyor css-var-_r_0_ ant-picker-css-var"])[1]
+${LAST_ACTIVITY_DATE_XPATH}                 //input[@id="LastActivityDate"]
 ${PREVIOUS_LAST_ACTIVITY_DATE_XPATH}        //button[@class="ant-picker-header-prev-btn"]
 ${SELECT_LAST_ACTIVITY_DATE_XPATH}          //div[text()='22']
-${LAST_TRANSFER_DATE_XPATH}                 (//div[@class="ant-picker ant-picker-underlined css-xogyor css-var-_r_0_ ant-picker-css-var"])[2]
+${LAST_TRANSFER_DATE_XPATH}                 //input[@id="LastTransferDate"]
 ${SELECT_LAST_TRANSFER_DATE_XPATH}          (//div[text()='5'])[3]
+
+${LEAD_OWNER_XPATH}                         //input[@id="OwnerId"]
+${SELECT_LEAD_OWNER_XPATH}                //div[@title="Admin User"]
+${LEAD_PARTNER_CONTACT_XPATH}             //input[@id="LeadPartnerContact"]
+${SELECT_LEAD_PARTNER_CONTACT_XPATH}      //div[@title="Conrad"]
+
+${NOTES_XPATH}      //input[@id="Notes"]
+${NOTES_TEXT}       Adding the Lead with all the information
+
+${CREATE_RECORD_BUTTON_XPATH}       //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]
+${SUCCESS_MESSAGE_XPATH}            //span[text()='Record created successfully!']
 
 *** Test Cases ***
 Add New Lead
     [Documentation]    Add Lead
-    Log To Console   >>>Adding Prospect Information<<<
+    Log To Console   <<<Adding Prospect Information>>>
     Login
     Maximize Browser Window
-    Set Selenium Speed    2s
+    Set Selenium Speed    1s
     Click Element    ${LEADS_XPATH}
     Click Element    ${ADD_LEAD_XPATH}
     Wait Until Element Is Visible    ${LEADS_POPUP_XPATH}      timeout=10s
@@ -146,11 +157,11 @@ Add New Lead
     END
 
     Log To Console   <<<Adding Lead Details>>>
-    Click Element    ${LEAD_STATUS_XPATH}   
-    Click Element    ${SELECT_LEAD_STATUS_XPATH} 
-    Click Element    ${RATING_XPATH}  
+    Click Element    ${LEAD_STATUS_XPATH}
+    Click Element    ${SELECT_LEAD_STATUS_XPATH}
+    Click Element    ${RATING_XPATH}
     Click Element    ${SELECT_RATING_XPATH}
-    Click Element    ${DESCRIPTION_XPATH}  
+    Click Element    ${DESCRIPTION_XPATH}
     Input Text    ${DESCRIPTION_XPATH}      ${DESCRIPTION_TEXT}
 
     Log To Console   <<<Adding Address & Prefrences>>>
@@ -164,7 +175,7 @@ Add New Lead
     Input Text    ${STATE_XPATH}       ${STATE_TEXT}
     Click Element    ${POSTALCODE_XPATH}
     Input Text    ${POSTALCODE_XPATH}       ${POSTALCODE_TEXT}
-    Click Element    ${COUNTRY_XPATH} 
+    Click Element    ${COUNTRY_XPATH}
     Input Text    ${COUNTRY_XPATH}        ${COUNTRY_TEXT}
     Click Element    ${EMIAL_OPT_OUT_XPATH}
 
@@ -174,5 +185,21 @@ Add New Lead
     Click Element    ${SELECT_LAST_ACTIVITY_DATE_XPATH}
     Click Element    ${LAST_TRANSFER_DATE_XPATH}
     Click Element    ${SELECT_LAST_TRANSFER_DATE_XPATH}
+
+    Log To Console   <<<Adding Relationships>>>
+    Click Element    ${LEAD_OWNER_XPATH}  
+    Click Element    ${SELECT_LEAD_OWNER_XPATH}  
+    Click Element    ${LEAD_PARTNER_CONTACT_XPATH}  
+    Click Element    ${SELECT_LEAD_PARTNER_CONTACT_XPATH}
+
+    Log To Console   <<<Adding Additional Information>>>
+    Click Element    ${NOTES_XPATH}
+    Input Text    ${NOTES_XPATH}     ${NOTES_TEXT}
+
+    Log To Console    <<<Creating the Lead record>>>
+    Click Element    ${CREATE_RECORD_BUTTON_XPATH}
+
+    Log To Console    <<<Lead record created successfully!>>>
+    Wait Until Element Is Visible    ${SUCCESS_MESSAGE_XPATH}
 
     Close Browser

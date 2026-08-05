@@ -17,6 +17,7 @@ ${ERROR_MESSAGE_XPATH}       //*[contains(text(),'Login failed')]
 
 Invalid Login
     [Documentation]    Logs in with incorrect credentials and verifies an error message appears
+    Log To Console    <<<Logging in with invalid credentials>>>
     Maximize Browser Window
     Wait Until Element Is Visible    ${EMAIL_FIELD_XPATH}    timeout=10s
     Input Text    ${EMAIL_FIELD_XPATH}    ${INVALID_EMAIL}
