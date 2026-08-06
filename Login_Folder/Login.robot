@@ -17,7 +17,7 @@ Login Scenario
        IF    '${email}' == 'it.teammobile01@gmail.com' and '${password}' == 'Bss@1234'
                 Wait Until Element Is Visible    ${SUCCESS_ELEMENT_XPATH}      15s
        ELSE
-            Page Should Contain    Please check your username and password.
+            Page Should Contain    Please check your email and password.
        END
 
 *** Test Cases ***
