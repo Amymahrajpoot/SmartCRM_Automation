@@ -1,180 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2026-08-05T14:45:30.620098" rpa="false" schemaversion="5">
-<suite id="s1" name="Add Lead Email Validation" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Leads\Add_Lead_Email_Validation.robot">
-<kw name="Launch Website" owner="Launch_Website" type="SETUP">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>&lt;&lt;&lt;Launching Website&gt;&gt;&gt;</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-05T14:45:31.095605" elapsed="0.000000"/>
-</kw>
+<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2026-08-06T10:45:37.662350" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Login_Folder\Login.robot">
+<kw name="Open My Browser" owner="Login" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-08-05T14:45:31.096602" level="INFO">Opening browser 'Chrome' to base url 'http://172.16.2.87/login'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
+<msg time="2026-08-06T10:45:39.595762" level="INFO">Opening browser 'Chrome' to base url 'http://172.16.2.87/login'.</msg>
+<arg>http://172.16.2.87/login</arg>
+<arg>Chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-08-05T14:45:31.096602" elapsed="13.525012"/>
+<status status="PASS" start="2026-08-06T10:45:39.595762" elapsed="10.104920"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-08-05T14:45:44.622672" elapsed="0.343388"/>
+<status status="PASS" start="2026-08-06T10:45:49.701682" elapsed="0.297874"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>tag:body</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-05T14:45:44.967059" elapsed="0.042673"/>
+<status status="PASS" start="2026-08-06T10:45:39.594723" elapsed="10.404833"/>
 </kw>
+<test id="s1-t1" name="Login Test Case Using it.teammobile01@gmail.com and Bss@1234" line="24">
+<kw name="Login Scenario">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-08-05T14:45:50.011207" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
+<msg time="2026-08-06T10:45:52.005316" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-08-05T14:45:45.009732" elapsed="5.001475"/>
-</kw>
-<doc>Opens the browser and navigates to the target website</doc>
-<status status="PASS" start="2026-08-05T14:45:31.094603" elapsed="18.916604"/>
-</kw>
-<test id="s1-t1" name="Email Validation" line="14">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>&lt;&lt;&lt;Validating Email on Add Lead popup&gt;&gt;&gt;</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-05T14:45:50.012828" elapsed="0.000321"/>
-</kw>
-<kw name="Login" owner="Launch_Website">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${EMAIL_FIELD_XPATH}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-05T14:45:50.015451" elapsed="0.033024"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-05T14:45:50.049514" level="INFO">Clicking element '//input[@id='email']'.</msg>
-<arg>${EMAIL_FIELD_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-05T14:45:50.049514" elapsed="0.136920"/>
-</kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2026-08-05T14:45:50.189975" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //input[@id='email'] element.</msg>
-<msg time="2026-08-05T14:45:50.491296" level="INFO">Pressing special key CONTROL down.</msg>
-<msg time="2026-08-05T14:45:50.491296" level="INFO">Sending key a</msg>
-<msg time="2026-08-05T14:45:50.491296" level="INFO">Releasing special key CONTROL.</msg>
-<msg time="2026-08-05T14:45:50.507958" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2026-08-05T14:45:50.508051" level="INFO">Releasing special key BACKSPACE.</msg>
-<arg>${EMAIL_FIELD_XPATH}</arg>
-<arg>CTRL+a</arg>
-<arg>BACKSPACE</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2026-08-05T14:45:50.188447" elapsed="0.332007"/>
+<status status="PASS" start="2026-08-06T10:45:50.005085" elapsed="2.000231"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-08-05T14:45:50.521512" level="INFO">Typing text 'it.teammobile01@gmail.com' into text field '//input[@id='email']'.</msg>
+<msg time="2026-08-06T10:45:52.006554" level="INFO">Typing text 'it.teammobile01@gmail.com' into text field '//input[@id='email']'.</msg>
 <arg>${EMAIL_FIELD_XPATH}</arg>
-<arg>${VALID_EMAIL}</arg>
+<arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-05T14:45:50.520454" elapsed="0.298986"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-05T14:45:50.819440" level="INFO">Clicking element '//input[@id='password']'.</msg>
-<arg>${PASSWORD_FIELD_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-05T14:45:50.819440" elapsed="0.085221"/>
-</kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2026-08-05T14:45:50.906623" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //input[@id='password'] element.</msg>
-<msg time="2026-08-05T14:45:51.204883" level="INFO">Pressing special key CONTROL down.</msg>
-<msg time="2026-08-05T14:45:51.204883" level="INFO">Sending key a</msg>
-<msg time="2026-08-05T14:45:51.205458" level="INFO">Releasing special key CONTROL.</msg>
-<msg time="2026-08-05T14:45:51.215902" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2026-08-05T14:45:51.216905" level="INFO">Releasing special key BACKSPACE.</msg>
-<arg>${PASSWORD_FIELD_XPATH}</arg>
-<arg>CTRL+a</arg>
-<arg>BACKSPACE</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2026-08-05T14:45:50.905659" elapsed="0.321125"/>
+<status status="PASS" start="2026-08-06T10:45:52.005316" elapsed="0.356661"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-08-05T14:45:51.227596" level="INFO">Typing password into text field '//input[@id='password']'.</msg>
-<msg time="2026-08-05T14:45:51.270103" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-08-06T10:45:52.362979" level="INFO">Typing password into text field '//input[@id='password']'.</msg>
+<msg time="2026-08-06T10:45:52.444210" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PASSWORD_FIELD_XPATH}</arg>
-<arg>${VALID_PASSWORD}</arg>
+<arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-05T14:45:51.226784" elapsed="0.141814"/>
+<status status="PASS" start="2026-08-06T10:45:52.362979" elapsed="0.348185"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-05T14:45:51.369603" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<msg time="2026-08-06T10:45:52.712168" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
 <arg>${LOGIN_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-05T14:45:51.369603" elapsed="0.157131"/>
+<status status="PASS" start="2026-08-06T10:45:52.711164" elapsed="0.177285"/>
 </kw>
+<if>
+<branch type="IF" condition="'${email}' == 'it.teammobile01@gmail.com' and '${password}' == 'Bss@1234'">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${SUCCESS_ELEMENT_XPATH}</arg>
-<arg>timeout=5s</arg>
+<arg>15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-05T14:45:51.526734" elapsed="0.952880"/>
+<status status="PASS" start="2026-08-06T10:45:52.889083" elapsed="1.038269"/>
 </kw>
-<doc>Logs in with valid credentials</doc>
-<status status="PASS" start="2026-08-05T14:45:50.013841" elapsed="2.465773"/>
+<status status="PASS" start="2026-08-06T10:45:52.888449" elapsed="1.038903"/>
+</branch>
+<branch type="ELSE">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Please check your username and password.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2026-08-06T10:45:53.928354" elapsed="0.000000"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-08-05T14:45:52.480529" elapsed="0.003521"/>
+<status status="NOT RUN" start="2026-08-06T10:45:53.927352" elapsed="0.001002"/>
+</branch>
+<status status="PASS" start="2026-08-06T10:45:52.888449" elapsed="1.039905"/>
+</if>
+<arg>email=it.teammobile01@gmail.com</arg>
+<arg>password=Bss@1234</arg>
+<status status="PASS" start="2026-08-06T10:45:50.004082" elapsed="3.926267"/>
 </kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>1s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2026-08-05T14:45:52.484050" elapsed="0.001160"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-05T14:45:52.486224" level="INFO">Clicking element '//span[text()= 'Leads']'.</msg>
-<arg>${LEADS_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-05T14:45:52.486224" elapsed="2.185219"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-05T14:45:54.672620" level="INFO">Clicking element '//span[text()='Add']'.</msg>
-<arg>${ADD_LEAD_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-05T14:45:54.672003" elapsed="2.445133"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LEADS_POPUP_XPATH}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-05T14:45:57.117136" elapsed="2.042698"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-05T14:45:59.161083" level="INFO">Clicking element '//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]'.</msg>
-<arg>${CREATE_RECORD_BUTTON_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-05T14:45:59.160974" elapsed="2.135668"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${VALIDATION_MSG_XPATH}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-05T14:46:01.303220" elapsed="2.034685"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>&lt;&lt;&lt;Lead cannot be added since Email field is empty&gt;&gt;&gt;</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-05T14:46:03.339370" elapsed="0.000000"/>
-</kw>
-<doc>Add Lead Email Validation</doc>
-<status status="PASS" start="2026-08-05T14:45:50.011207" elapsed="13.329103"/>
+<doc>Test has only tag 'requirement: 42'.</doc>
+<tag>critical</tag>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2026-08-06T10:45:50.000559" elapsed="3.930793"/>
 </test>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-08-05T14:46:03.342089" elapsed="3.273225"/>
-</kw>
-<status status="PASS" start="2026-08-05T14:45:30.621640" elapsed="35.994191"/>
+<status status="PASS" start="2026-08-06T10:45:37.664358" elapsed="16.268995"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">critical</stat>
+<stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="Add Lead Email Validation" id="s1" pass="1" fail="0" skip="0">Add Lead Email Validation</stat>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
 </suite>
 </statistics>
 <errors>
