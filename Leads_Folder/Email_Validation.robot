@@ -1,6 +1,6 @@
 *** Settings ***
 Library         SeleniumLibrary
-Resource        Lead.resource
+Resource        Add_Lead.resource
 Resource        ../Login_Folder/Login.resource
 
 *** Keywords ***

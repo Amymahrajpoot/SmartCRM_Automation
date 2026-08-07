@@ -2,10 +2,6 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${TABLE_SETTINGS_XPATH}     (//span[@aria-label="setting"])[2]
-${NAME_CHECKBOX_XPATH}      //span[text()='Name']/ancestor::div[@role='treeitem']//span[@role='checkbox']
-${MOBILE_CHECKBOX_XPATH}    //span[text()='Mobile']/ancestor::div[@role='treeitem']//span[@role='checkbox']
-${NOTES_CHECKBOX_XPATH}     //span[text()='Notes']/ancestor::div[@role='treeitem']//span[@role='checkbox']
 ${MORE_ICON_XPATH}          (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]
 ${EDIT_XPATH}               //li[@data-menu-id="rc-menu-uuid-edit"]
 ${EDIT_POPUP_XPATH}         //div[text()='Edit Record - Leads']

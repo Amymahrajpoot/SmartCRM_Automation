@@ -2,7 +2,7 @@
 Library         SeleniumLibrary
 Resource        Edit_Lead.resource
 Resource        ../Login_Folder/Login.resource
-Library         DataDriver    Edit_Lead.xlsx    sheet_name=Sheet1
+Library         DataDriver    ../Data/Edit_Lead.xlsx    sheet_name=Sheet1
 Test Template      Edit_Lead
 
 
@@ -10,15 +10,6 @@ Test Template      Edit_Lead
 Edit Lead
     [Arguments]    ${TITLE_FIELD_TEXT}   ${FIRSTNAME_FIELD_TEXT}   ${LASTNAME_FIELD_TEXT}  ${NAME_FIELD_TEXT}     ${LINKDIN_TEXT}
     [Documentation]    Edit Lead
-#    Log To Console   <<<Adding Columns from the Table Settings>>>
-#    Set Selenium Speed    1s
-#    Click Element    ${LEADS_XPATH}
-#    Click Element    ${TABLE_SETTINGS_XPATH}
-#    Click Element    ${NAME_CHECKBOX_XPATH}
-#    Click Element    ${MOBILE_CHECKBOX_XPATH}
-#    ${container}=    Get WebElement    //div[contains(@class,'ant-tree-list-holder')]
-#    Execute JavaScript    arguments[0].scrollTop = arguments[0].scrollHeight;    ARGUMENTS    ${container}
-#    Click Element    ${NOTES_CHECKBOX_XPATH}
 
     Log To Console   <<<Editing Lead from the Actions column>>>
     Click Element    ${MORE_ICON_XPATH}

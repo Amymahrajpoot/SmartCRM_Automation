@@ -1,8 +1,8 @@
 *** Settings ***
 Library         SeleniumLibrary
-Resource        Lead.resource
+Resource        Add_Lead.resource
 Resource        ../Login_Folder/Login.resource
-Library         DataDriver    Lead_Data.xlsx    sheet_name=Sheet1
+Library    DataDriver    ../Data/Lead_Data.xlsx    sheet_name=Sheet1
 Test Template      Create Lead
 
 *** Keywords ***
@@ -26,7 +26,9 @@ Create Lead
     Click Element    ${LEAD_SOURCE_XPATH}
     Click Element    ${SELECT_LEAD_SOURCE_XPATH}
     Click Element    ${LEAD_PARTNER_ACCOUNT_XPATH}
+    Scroll Element Into View    ${SELECT_LEAD_PARTNER_ACCOUNT_XPATH}
     Click Element    ${SELECT_LEAD_PARTNER_ACCOUNT_XPATH}
+
 
     Log To Console   <<<Adding Contact Information>>>
     Click Element    ${MOBILE_CODE_XPATH}
@@ -121,4 +123,3 @@ Create Lead
 Create Lead using ${TITLE_FIELD_TEXT}    ${FIRSTNAME_FIELD_TEXT}   ${LASTNAME_FIELD_TEXT}  ${NAME_FIELD_TEXT}  ${MOBILE_CODE_TEXT}  ${MOBILE_NUMBER_TEXT}  ${EMAIL_TEXT}    ${LINKDIN_TEXT}     ${PHONE_CODE_TEXT}     ${PHONE_NUMBER_TEXT}    ${COMPANY_TEXT}     ${WEBSITE_TEXT}     ${DESCRIPTION_TEXT}     ${ADDRESS_TEXT}     ${STREET_TEXT}       ${CITY_TEXT}       ${STATE_TEXT}       ${POSTALCODE_TEXT}       ${COUNTRY_TEXT}        ${NOTES_TEXT}
     [Documentation]    Requirement: 42 - create the lead
     [Tags]    smoke
-
