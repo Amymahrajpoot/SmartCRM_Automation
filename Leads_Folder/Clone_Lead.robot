@@ -1,10 +1,10 @@
 *** Settings ***
 Library         SeleniumLibrary
-Resource        Clone_Lead.resource
+Resource        Lead.resource
 
 *** Keywords ***
 Clone Lead
-    Set Selenium Speed    1s
+    Set Selenium Speed    0.5s
     Click Element    ${MORE_ICON_XPATH}
     Click Element    ${CLONE_OPTION_XPATH}
     Wait Until Element Is Visible    ${CLONE_POPUP_XPATH}    5s

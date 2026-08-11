@@ -1,6 +1,6 @@
 *** Settings ***
 Library         SeleniumLibrary
-Resource        Dashboard.resource
+Resource        Lead.resource
 
 *** Keywords ***
 Search Lead

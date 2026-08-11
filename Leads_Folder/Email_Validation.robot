@@ -1,12 +1,12 @@
 *** Settings ***
 Library         SeleniumLibrary
-Resource        Add_Lead.resource
+Resource        Lead.resource
 Resource        ../Login_Folder/Login.resource
 
 *** Keywords ***
 Email Validation
     Log To Console   <<<Validating Email on Add Lead popup>>>
-    Set Selenium Speed    1s
+    Set Selenium Speed    0.5s
     Click Element    ${LEADS_XPATH}
     Click Element    ${ADD_LEAD_XPATH}
     Wait Until Element Is Visible    ${LEADS_POPUP_XPATH}      timeout=10s

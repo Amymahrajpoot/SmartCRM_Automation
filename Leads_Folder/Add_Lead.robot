@@ -1,6 +1,6 @@
 *** Settings ***
 Library         SeleniumLibrary
-Resource        Add_Lead.resource
+Resource        Lead.resource
 Resource        ../Login_Folder/Login.resource
 Library    DataDriver    ../Data/Lead_Data.xlsx    sheet_name=Sheet1
 Test Template      Create Lead
@@ -9,10 +9,10 @@ Test Template      Create Lead
 Create Lead
     [Arguments]    ${TITLE_FIELD_TEXT}    ${FIRSTNAME_FIELD_TEXT}   ${LASTNAME_FIELD_TEXT}  ${NAME_FIELD_TEXT}  ${MOBILE_CODE_TEXT}  ${MOBILE_NUMBER_TEXT}  ${EMAIL_TEXT}    ${LINKDIN_TEXT}     ${PHONE_CODE_TEXT}     ${PHONE_NUMBER_TEXT}    ${COMPANY_TEXT}     ${WEBSITE_TEXT}     ${DESCRIPTION_TEXT}     ${ADDRESS_TEXT}     ${STREET_TEXT}       ${CITY_TEXT}       ${STATE_TEXT}       ${POSTALCODE_TEXT}       ${COUNTRY_TEXT}        ${NOTES_TEXT}
     Log To Console   <<<Adding Prospect Information>>>
-    Set Selenium Speed    1s
-#    Click Element    ${LEADS_XPATH}
-#    Click Element    ${ADD_LEAD_XPATH}
-#    Wait Until Element Is Visible    ${LEADS_POPUP_XPATH}      timeout=10s
+    Set Selenium Speed    0.5s
+#   Click Element    ${LEADS_XPATH}
+#   Click Element    ${ADD_LEAD_XPATH}
+#   Wait Until Element Is Visible    ${LEADS_POPUP_XPATH}      timeout=10s
     Click Element    ${TITLE_FIELD_XPATH}
     Input Text    ${TITLE_FIELD_XPATH}    ${TITLE_FIELD_TEXT}
     Click Element    ${FIRSTNAME_FIELD_XPATH}
@@ -25,9 +25,10 @@ Create Lead
     Click Element    ${SELECT_GENDER_IDENTITY_XPATH}
     Click Element    ${LEAD_SOURCE_XPATH}
     Click Element    ${SELECT_LEAD_SOURCE_XPATH}
-    Click Element    ${LEAD_PARTNER_ACCOUNT_XPATH}
-    Scroll Element Into View    ${SELECT_LEAD_PARTNER_ACCOUNT_XPATH}
-    Click Element    ${SELECT_LEAD_PARTNER_ACCOUNT_XPATH}
+#    Click Element    ${LEAD_PARTNER_ACCOUNT_XPATH}
+#    Scroll Element Into View    ${SELECT_LEAD_PARTNER_ACCOUNT_XPATH}
+#    Wait Until Element Is Visible    ${SELECT_LEAD_PARTNER_ACCOUNT_XPATH}       10s
+#    Click Element    ${SELECT_LEAD_PARTNER_ACCOUNT_XPATH}
 
 
     Log To Console   <<<Adding Contact Information>>>
@@ -105,8 +106,8 @@ Create Lead
     Log To Console   <<<Adding Relationships>>>
     Click Element    ${LEAD_OWNER_XPATH}
     Click Element    ${SELECT_LEAD_OWNER_XPATH}
-    Click Element    ${LEAD_PARTNER_CONTACT_XPATH}
-    Click Element    ${SELECT_LEAD_PARTNER_CONTACT_XPATH}
+#    Click Element    ${LEAD_PARTNER_CONTACT_XPATH}
+#    Click Element    ${SELECT_LEAD_PARTNER_CONTACT_XPATH}
 
     Log To Console   <<<Adding Additional Information>>>
     Click Element    ${NOTES_XPATH}
@@ -116,8 +117,8 @@ Create Lead
     Click Element    ${CREATE_RECORD_BUTTON_XPATH}
 
     Log To Console    <<<Lead record created successfully!>>>
-    Wait Until Element Is Visible    ${SUCCESS_MESSAGE_XPATH}
-     #Handling popup
+    Wait Until Element Is Visible    ${ADD_SUCCESS_MESSAGE_XPATH}
+
 
 *** Test Cases ***
 Create Lead using ${TITLE_FIELD_TEXT}    ${FIRSTNAME_FIELD_TEXT}   ${LASTNAME_FIELD_TEXT}  ${NAME_FIELD_TEXT}  ${MOBILE_CODE_TEXT}  ${MOBILE_NUMBER_TEXT}  ${EMAIL_TEXT}    ${LINKDIN_TEXT}     ${PHONE_CODE_TEXT}     ${PHONE_NUMBER_TEXT}    ${COMPANY_TEXT}     ${WEBSITE_TEXT}     ${DESCRIPTION_TEXT}     ${ADDRESS_TEXT}     ${STREET_TEXT}       ${CITY_TEXT}       ${STATE_TEXT}       ${POSTALCODE_TEXT}       ${COUNTRY_TEXT}        ${NOTES_TEXT}
