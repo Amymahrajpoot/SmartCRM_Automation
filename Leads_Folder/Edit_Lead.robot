@@ -5,7 +5,6 @@ Resource        ../Login_Folder/Login.resource
 Library         DataDriver    ../Data/Edit_Lead.xlsx    sheet_name=Sheet1
 Test Template      Edit_Lead
 
-
 *** Keywords ***
 Edit Lead
     [Arguments]    ${TITLE_FIELD_EDITED_TEXT}   ${FIRSTNAME_FIELD_EDITED_TEXT}   ${LASTNAME_FIELD_EDITED_TEXT}  ${NAME_FIELD_EDITED_TEXT}     ${LINKDIN_EDITED_TEXT}
