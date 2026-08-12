@@ -11,7 +11,7 @@ Search Lead
     Wait Until Element Is Visible    ${SEARCHED_RECORD_XPATH}   5s
 
 *** Test Cases ***
-Lead Searhced Successfully
-    [Documentation]    Requirement: 42 - View lead
+Verify that the user can Search Lead
+    [Documentation]    Requirement: 42 - Search lead
     [Tags]    smoke    critical
     Search Lead

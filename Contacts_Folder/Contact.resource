@@ -50,6 +50,9 @@ ${DEPT_FIELD_XPATH}                                 //input[@id="Department"]
 ${CREATE_BTN_XPATH}                                 //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]
 ${CREATE_SUCCESS_MSG_XPATH}                         //span[text()='Record created successfully!']
 
+#Email Validation
+${CONTACT_EMAIL_VALIDATION_MSG_XPATH}               //div[text()='Please enter Email']
+
 #View Contact
 ${MORE_ICON_XPATH}          (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]
 ${VIEW_ICON_XPATH}          //li[@data-menu-id="rc-menu-uuid-view"]
@@ -62,6 +65,8 @@ ${EDIT_CONTACT_POPUP_XPATH}      //div[text()='Edit Record - Contacts']
 ${TITLE_FIELD_EDITED_TEXT}          Amymah
 ${FIRST_NAME_FIELD_EDITED_TEXT}     Amymahtest
 ${LAST_NAME_FIELD_EDITED_TEXT}      usman
+${EMAIL_FIELD_EDITED_TEXT}          amymahtest@gmail.com
+${UPDATES_FIELD_EDITED_TEXT}        updating amymatest contact
 ${SELECT_REPORT_TO_DROPDOWN_EDITED_XPATH}          //div[@title="Ashfaq Ali"]
 ${SELECT_CONTACTOWNER_DROPDOWN_EDITED_XPATH}       (//div[@title="Admin User"])[2]
 ${UPDATE_BTN_XPATH}                                 //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]
@@ -70,6 +75,42 @@ ${EDITED_SUCCESS_MSG_XPATH}                         //span[text()='Contacts upda
 #Clone Contact
 ${CLONE_ICON_XPATH}                  //li[@data-menu-id="rc-menu-uuid-clone"]
 ${CLONE_CONTACT_POPUP_XPATH}        //div[text()='Clone Record - Contacts']
-${CLONE_BTN_XPATH}                  //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]
+${CLONE_BTN_XPATH}                  (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"])[2]
 ${CLONE_SUCCESS_MSG_XPATH}          //span[text()='Record created successfully!']
 
+#Delete Contact
+${DELETE_ICON_XPATH}                //li[@data-menu-id="rc-menu-uuid-delete"]
+${DELETE_POPUP_XPATH}               //span[text()='Delete Record']
+${DELETE_BTN_XPATH}                 //button[@class="ant-btn css-xogyor css-var-root ant-btn-default ant-btn-dangerous ant-btn-color-dangerous ant-btn-variant-outlined"]
+${DELETED_SUCCESS_MSG_XPATH}        //span[text()='Contacts deleted successfully!']
+
+#Filter Contact
+${FILTER_BTN_XPATH}                 //span[@class="ant-badge css-xogyor css-var-_r_0_"]
+${FILTER_POPUP_XPATH}               //div[text()='Advanced Filters']
+${ADD_CONDITION_BTN_XPATH}          //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-dashed ant-btn-color-default ant-btn-variant-dashed ant-btn-sm ant-btn-block"]
+${TITLE_DROPDOWN_XPATH}             (//div[@class="ant-flex css-xogyor css-var-_r_0_ ant-flex-align-center ant-flex-gap-small"]/child::div)[3]
+${SELECT_TITLE_XPATH}               //div[text()='Assistant']
+${CONDITION_DROPDOWN_XPATH}         //div[@title="is equal to"]
+${SELECT_CONDITION_XPATH}           //div[text()='contains']
+${ENTER_VALUE_XPATH}                (//input[@placeholder="Enter value"])[1]
+${ENTER_VALUE_TEXT}                 vid
+${SECOND_TITLE_DROPDOWN_XPATH}      (//div[@class="ant-select ant-select-sm ant-select-outlined css-var-_r_0_ ant-select-css-var css-xogyor ant-select-single ant-select-show-arrow"])[4]
+${SELECT_SECOND_TITLE_XPATH}        (//div[text()='Email'])[2]
+${SECOND_VALUE_ENTER_XPATH}         (//input[@placeholder="Enter value"])[2]
+${ENTER_SECOND_VALUE_TEXT}          amymahtest@gmail.com
+${APPLY_FILTER_BTN_XPATH}           //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]
+${FILTERED_ROW_XPATH}               //tr[@class="ant-table-row ant-table-row-level-0"]
+
+#Search Contact
+${SEARCH_BAR_XPATH}                 //input[@placeholder="Search..."]
+${SEARCH_TEXT}                      amymah
+${SEARCH_ICON_XPATH}                //span[@class="anticon anticon-search"]
+${SEARCHED_RECORD_XPATH}            //div[@class="ant-table-body"]
+
+#Table Settings
+${TABLE_SETTINGS_XPATH}             (//span[@class="anticon anticon-setting"])[2]
+${FIRSTNAME_CHECKBOX_XPATH}         //span[text()='First Name']/ancestor::div[@role='treeitem']//span[@role='checkbox']
+${BIRTHDATE_CHECKBOX_XPATH}         //span[text()='Birthdate']/ancestor::div[@role='treeitem']//span[@role='checkbox']
+${DESCRIPTION_CHECKBOX_XPATH}       //span[text()='Description']/ancestor::div[@role='treeitem']//span[@role='checkbox']
+${RESET_ICON_XPATH}                 //a[text()='Reset']
+${COLUMN_DISPLAY_XPATH}             //span[@class="ant-checkbox ant-wave-target css-xogyor ant-checkbox-checked"]

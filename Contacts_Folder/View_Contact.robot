@@ -13,7 +13,7 @@ View Contact
     Click Element    ${BACK_ICON_XPATH} 
 
 *** Test Cases ***
-Viewing Cntact
+Verfiy that the user can View the Contact
     [Documentation]    Requirement: 42 - View Contact
     [Tags]    smoke    critical
     View Contact

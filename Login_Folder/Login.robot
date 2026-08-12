@@ -21,7 +21,7 @@ Login Scenario
        END
 
 *** Test Cases ***
-Login Test Case Using ${email} and ${password}
+Verify that the user can login using ${email} and ${password}
     [Documentation]    Test has only tag 'requirement: 42'.
     [Tags]    smoke    critical    login
     Login Scenario

@@ -14,7 +14,7 @@ Convert Lead
     Log To Console    <<<Lead record converted successfully!>>>
 
 *** Test Cases ***
-Converting Lead Successfully
+Verfiy that the user can Convert the Lead
     [Documentation]    Requirement: 42 Convert the lead
     [Tags]    smoke
     Convert Lead

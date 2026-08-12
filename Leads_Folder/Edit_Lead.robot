@@ -83,7 +83,7 @@ Edit Lead
     Wait Until Element Is Visible    ${UPDATE_SUCCESS_MESSAGE_XPATH}
 
 *** Test Cases ***
-Update Lead using  ${TITLE_FIELD_EDITED_TEXT}   ${FIRSTNAME_FIELD_EDITED_TEXT}   ${LASTNAME_FIELD_EDITED_TEXT}  ${NAME_FIELD_EDITED_TEXT}     ${LINKDIN_EDITED_TEXT}
+Verfiy that the user can Edit/Update the Lead using  ${TITLE_FIELD_EDITED_TEXT}   ${FIRSTNAME_FIELD_EDITED_TEXT}   ${LASTNAME_FIELD_EDITED_TEXT}  ${NAME_FIELD_EDITED_TEXT}     ${LINKDIN_EDITED_TEXT}
     [Documentation]    Requirement: 42 - Update the lead
     [Tags]    smoke
 

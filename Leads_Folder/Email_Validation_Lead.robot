@@ -12,11 +12,11 @@ Email Validation
     Wait Until Element Is Visible    ${LEADS_POPUP_XPATH}      timeout=10s
 
     Click Element    ${CREATE_RECORD_BUTTON_XPATH}
-    Wait Until Element Is Visible    ${VALIDATION_MSG_XPATH}    5s
+    Wait Until Element Is Visible    ${LEAD_EMAIL_VALIDATION_MSG_XPATH}    5s
     Log To Console    <<<Lead cannot be added since Email field is empty>>>
 
 *** Test Cases ***
-Validate Empty Email Shows Error
-    [Documentation]    Verifies the lead cannot be created when the Email field is left empty
+Verfiy that the user can not create the Lead without entering the Email
+    [Documentation]    Valiadte Email on Lead popup
     [Tags]    smoke    validation
     Email Validation

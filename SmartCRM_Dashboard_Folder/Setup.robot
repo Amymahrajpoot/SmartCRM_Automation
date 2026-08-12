@@ -19,7 +19,7 @@ Setup
     Wait Until Element Is Visible    ${ROLES_PAGE_XPATH}      5s
 
 *** Test Cases ***
-Setup Options accessed successfully
-    [Documentation]    Requirement: 42 - Access Setup  options
+Verify the the user can access the setup options
+    [Documentation]    Requirement: 42 - Access Setup options
     [Tags]    smoke    critical
     Setup

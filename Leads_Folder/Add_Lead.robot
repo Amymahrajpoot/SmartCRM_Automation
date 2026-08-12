@@ -121,6 +121,6 @@ Create Lead
 
 
 *** Test Cases ***
-Create Lead using ${TITLE_FIELD_TEXT}    ${FIRSTNAME_FIELD_TEXT}   ${LASTNAME_FIELD_TEXT}  ${NAME_FIELD_TEXT}  ${MOBILE_CODE_TEXT}  ${MOBILE_NUMBER_TEXT}  ${EMAIL_TEXT}    ${LINKDIN_TEXT}     ${PHONE_CODE_TEXT}     ${PHONE_NUMBER_TEXT}    ${COMPANY_TEXT}     ${WEBSITE_TEXT}     ${DESCRIPTION_TEXT}     ${ADDRESS_TEXT}     ${STREET_TEXT}       ${CITY_TEXT}       ${STATE_TEXT}       ${POSTALCODE_TEXT}       ${COUNTRY_TEXT}        ${NOTES_TEXT}
+Verfiy that the user can create the Lead using ${TITLE_FIELD_TEXT}    ${FIRSTNAME_FIELD_TEXT}   ${LASTNAME_FIELD_TEXT}  ${NAME_FIELD_TEXT}  ${MOBILE_CODE_TEXT}  ${MOBILE_NUMBER_TEXT}  ${EMAIL_TEXT}    ${LINKDIN_TEXT}     ${PHONE_CODE_TEXT}     ${PHONE_NUMBER_TEXT}    ${COMPANY_TEXT}     ${WEBSITE_TEXT}     ${DESCRIPTION_TEXT}     ${ADDRESS_TEXT}     ${STREET_TEXT}       ${CITY_TEXT}       ${STATE_TEXT}       ${POSTALCODE_TEXT}       ${COUNTRY_TEXT}        ${NOTES_TEXT}
     [Documentation]    Requirement: 42 - create the lead
     [Tags]    smoke

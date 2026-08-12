@@ -24,7 +24,7 @@ Filter Lead
     Log To Console    <<<Row filtered successfully!>>>
 
 *** Test Cases ***
-Row filtered Successfully
+Verfiy that the user can Filter the Lead
     [Documentation]    Requirement: 42 - Filter lead
     [Tags]    smoke    critical    login
     Filter Lead

@@ -14,7 +14,7 @@ Clone Lead
     Click Element    ${BACK_ICON_XPATH}
 
 *** Test Cases ***
-Clone Lead Successfully
+Verfiy that the user can Clone the Lead
     [Documentation]    Requirement: 42 - clone lead
     [Tags]    smoke    critical    login
     Clone Lead

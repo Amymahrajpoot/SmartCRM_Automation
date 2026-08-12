@@ -10,10 +10,10 @@ Create Contact
     [Arguments]    ${TITLE_FIELD_TEXT}    ${FIRSTNAME_FIELD_TEXT}   ${LASTNAME_FIELD_TEXT}    ${MOBILE_CODE_TEXT}  ${MOBILE_NUMBER_TEXT}  ${PHONE_CODE_TEXT}  ${PHONE_NUMBER_TEXT}    ${EMAIL_TEXT}   ${UPDATES_TEXT}     ${MAILING_ADDRESS_TEXT}     ${OTHER_ADDRESS_TEXT}       ${DESCRIPTION_TEXT}     ${HOME_PHONE_CODE_TEXT}     ${HOME_PHONE_NUMBER_TEXT}       ${OTHER_PHONE_CODE_TEXT}     ${OTHER_PHONE_NUMBER_TEXT}     ${ASSISTANT_PHONE_CODE_TEXT}     ${ASSISTANT_PHONE_NUMBER_TEXT}     ${ASSISTANT_TEXT}       ${DEPARTMENT_TEXT}
     Set Selenium Speed    0.5s
     Log To Console   <<<Adding Contact Information>>>
-    Click Element    ${CONTACTS_OPTION_XPATH}
-    Wait Until Element Is Visible    ${CONTACTS_PAGE_XPATH}     5s
-    Click Element    ${ADD_BUTTON_XPATH}
-    Wait Until Element Is Visible    ${ADD_RECORD_POPUP_XPATH}      5s
+#    Click Element    ${CONTACTS_OPTION_XPATH}
+#    Wait Until Element Is Visible    ${CONTACTS_PAGE_XPATH}     5s
+#    Click Element    ${ADD_BUTTON_XPATH}
+#    Wait Until Element Is Visible    ${ADD_RECORD_POPUP_XPATH}      5s
     Click Element    ${TITLE_FIELD_XPATH}
     Input Text    ${TITLE_FIELD_XPATH}    ${TITLE_FIELD_TEXT}
     Click Element    ${FIRST_NAME_FIELD_XPATH}
@@ -89,6 +89,6 @@ Create Contact
 
 
 *** Test Cases ***
-Create Contact using    ${TITLE_FIELD_TEXT}    ${FIRSTNAME_FIELD_TEXT}   ${LASTNAME_FIELD_TEXT}   ${MOBILE_CODE_TEXT}  ${MOBILE_NUMBER_TEXT}  ${PHONE_CODE_TEXT}  ${PHONE_NUMBER_TEXT}    ${EMAIL_TEXT}   ${UPDATES_TEXT}     ${MAILING_ADDRESS_TEXT}     ${OTHER_ADDRESS_TEXT}       ${DESCRIPTION_TEXT}     ${HOME_PHONE_CODE_TEXT}     ${HOME_PHONE_NUMBER_TEXT}       ${OTHER_PHONE_CODE_TEXT}     ${OTHER_PHONE_NUMBER_TEXT}     ${ASSISTANT_PHONE_CODE_TEXT}     ${ASSISTANT_PHONE_NUMBER_TEXT}     ${ASSISTANT_TEXT}       ${DEPARTMENT_TEXT}
+Verfiy that the user can create the Contact using    ${TITLE_FIELD_TEXT}    ${FIRSTNAME_FIELD_TEXT}   ${LASTNAME_FIELD_TEXT}   ${MOBILE_CODE_TEXT}  ${MOBILE_NUMBER_TEXT}  ${PHONE_CODE_TEXT}  ${PHONE_NUMBER_TEXT}    ${EMAIL_TEXT}   ${UPDATES_TEXT}     ${MAILING_ADDRESS_TEXT}     ${OTHER_ADDRESS_TEXT}       ${DESCRIPTION_TEXT}     ${HOME_PHONE_CODE_TEXT}     ${HOME_PHONE_NUMBER_TEXT}       ${OTHER_PHONE_CODE_TEXT}     ${OTHER_PHONE_NUMBER_TEXT}     ${ASSISTANT_PHONE_CODE_TEXT}     ${ASSISTANT_PHONE_NUMBER_TEXT}     ${ASSISTANT_TEXT}       ${DEPARTMENT_TEXT}
     [Documentation]    Requirement: 42 - create the Contact
     [Tags]    smoke

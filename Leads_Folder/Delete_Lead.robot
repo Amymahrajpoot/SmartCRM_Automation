@@ -13,7 +13,7 @@ Delete Lead
     Log To Console    <<<Lead record deleted successfully!>>>
 
 *** Test Cases ***
-Lead deleted Successfully
+Verfiy that the user can Delete the Lead
     [Documentation]    Requirement: 42 - Delete lead
     [Tags]    smoke    critical    login
     Delete Lead
