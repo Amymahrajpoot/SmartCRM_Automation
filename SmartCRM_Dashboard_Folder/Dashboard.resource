@@ -28,3 +28,8 @@ ${USERS_XPATH}                             //li[@data-menu-id="rc-menu-uuid-/use
 ${USERS_PAGE_XPATH}                         //h2[text()='Users Management']
 ${ROLES_XPATH}                             //li[@data-menu-id="rc-menu-uuid-/roles"]
 ${ROLES_PAGE_XPATH}                         //h2[text()='Roles Management']
+
+#Logout
+${PROFILE_ICON_XPATH}                   //span[@class="ant-avatar ant-avatar-sm ant-avatar-circle ant-avatar-icon css-var-_r_0_ ant-avatar-css-var css-xogyor"]
+${LOGOUT_BTN_XPATH}                     //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-dangerous ant-btn-color-dangerous ant-btn-variant-solid ant-btn-block"]
+${LOGIN_PAGE_XPATH}                     //div[@class="ant-card ant-card-bordered css-xogyor css-var-_r_0_"]

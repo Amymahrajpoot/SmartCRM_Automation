@@ -9,7 +9,7 @@ Add Columns
     Log To Console   <<<Adding Columns from the Table Settings>>>
     Set Selenium Speed    0.5s
     #Landing on the Lead Tab
-#    Click Element    ${LEADS_XPATH}
+#   Click Element    ${LEADS_XPATH}
     Click Element    ${TABLE_SETTINGS_XPATH}
     Mouse Out    ${RESET_ICON_XPATH}
     Sleep    0.5s

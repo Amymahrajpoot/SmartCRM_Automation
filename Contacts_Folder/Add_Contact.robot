@@ -2,7 +2,7 @@
 Library         SeleniumLibrary
 Resource        Contact.resource
 Resource        ../Login_Folder/Login.resource
-Library    DataDriver    ../Data/Contact_Data.xlsx    sheet_name=Sheet1
+Library    DataDriver    ../Data_Folder/Contact_Data.xlsx    sheet_name=Sheet1
 Test Template      Create Contact
 
 *** Keywords ***
@@ -35,7 +35,8 @@ Create Contact
     Input Text    ${EMAIL_FIELD_XPATH}    ${EMAIL_TEXT}
     Click Element    ${UPDATES_FIELD_XPATH} 
     Input Text    ${UPDATES_FIELD_XPATH}     ${UPDATES_TEXT}
-    Click Element    ${ACCOUNTNAME_DROPDOWN_XPATH} 
+    Click Element    ${ACCOUNTNAME_DROPDOWN_XPATH}
+    Wait Until Element Is Visible    ${SELECT_ACCOUNTNAME_DROPDOWN_XPATH}       5s
     Click Element    ${SELECT_ACCOUNTNAME_DROPDOWN_XPATH}
     Click Element    ${REPORT_TO_DROPDOWN_XPATH}
     Click Element    ${SELECT_REPORT_TO_DROPDOWN_XPATH}

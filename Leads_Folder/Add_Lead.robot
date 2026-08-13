@@ -2,7 +2,7 @@
 Library         SeleniumLibrary
 Resource        Lead.resource
 Resource        ../Login_Folder/Login.resource
-Library    DataDriver    ../Data/Lead_Data.xlsx    sheet_name=Sheet1
+Library    DataDriver    ../Data_Folder/Lead_Data.xlsx    sheet_name=Sheet1
 Test Template      Create Lead
 
 *** Keywords ***

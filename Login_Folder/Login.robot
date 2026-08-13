@@ -2,7 +2,7 @@
 Library     SeleniumLibrary
 Resource    Login.resource
 Suite Setup     Open My Browser
-Library    DataDriver   ../Data/Login_Data.xlsx    sheet_name=Sheet1
+Library    DataDriver   ../Data_Folder/Login_Data.xlsx    sheet_name=Sheet1
 Library    Dialogs
 Test Template   Login Scenario
 

@@ -2,7 +2,7 @@
 Library         SeleniumLibrary
 Resource        Lead.resource
 Resource        ../Login_Folder/Login.resource
-Library         DataDriver    ../Data/Edit_Lead.xlsx    sheet_name=Sheet1
+Library         DataDriver    ../Data_Folder/Edit_Lead.xlsx    sheet_name=Sheet1
 Test Template      Edit_Lead
 
 *** Keywords ***
