@@ -5,4 +5,4 @@ robot Login_Folder/Login.robot Leads_Folder/Add_Lead.robot Leads_Folder/View_Lea
 robot Login_Folder/Login.robot  Contacts_Folder/Add_Contact.robot Contacts_Folder/View_Contact.robot Contacts_Folder/Edit_Contact.robot Contacts_Folder/Clone_Contact.robot Contacts_Folder/Filter_Contact.robot Contacts_Folder/Delete_Contact.robot
 
 #Dashboard
-robot Login_Folder/Login.robot SmartCRM_Dashboard_Folder/Mode.robot SmartCRM_Dashboard_Folder/Full_Screen.robot SmartCRM_Dashboard_Folder/Pagination.robot SmartCRM_Dashboard_Folder/Setup.robot SmartCRM_Dashboard_Folder/Logout.robot
+robot Login_Folder/Login.robot SmartCRM_Dashboard_Folder/Mode.robot SmartCRM_Dashboard_Folder/Setup.robot SmartCRM_Dashboard_Folder/Full_Screen.robot SmartCRM_Dashboard_Folder/Logout.robot

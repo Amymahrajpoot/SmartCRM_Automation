@@ -4,7 +4,6 @@ Resource        Dashboard.resource
 
 *** Keywords ***
 Logout
-    Set Selenium Speed    0.5s
     Log To Console    <<<Logging out of the application>>>
     Click Element       ${PROFILE_ICON_XPATH}
     Click Element    ${LOGOUT_BTN_XPATH}

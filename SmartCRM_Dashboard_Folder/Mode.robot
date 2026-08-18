@@ -4,7 +4,6 @@ Resource        Dashboard.resource
 
 *** Keywords ***
 Setting Mode
-    Set Selenium Speed    0.5s
     Log To Console    <<<Setting mode to the dark>>>
     Click Element       ${DARH_MODE_XPATH}
     Log To Console    <<<Setting mode to the light>>>

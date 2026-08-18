@@ -13,6 +13,7 @@ Edit Lead
     Log To Console   <<<Editing Lead from the Actions column>>>
     Click Element    ${LEADS_XPATH}
     Click Element    ${MORE_ICON_XPATH}
+    Wait Until Element Is Visible    ${EDIT_XPATH}      5s
     Click Element    ${EDIT_XPATH}
     Wait Until Element Is Visible    ${EDIT_POPUP_XPATH}        5s
 

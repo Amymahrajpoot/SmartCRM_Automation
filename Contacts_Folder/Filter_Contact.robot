@@ -55,10 +55,20 @@ Add Columns
     Click Element    ${ACTIONS_CHECKBOX_XPATH}
     Click Element    ${MAIN_XPATH}
 
+Pagination
+    Log To Console    <<<Applying Pagination>>>
+    Set Selenium Speed    0.1s
+    Click Element    ${NEXT_ARROW_XPATH}
+    Click Element    ${PREV_ARROW_XPATH}
+    Click Element    ${ROW_PER_PAGE_XPATH}
+    Wait Until Element Is Visible    ${SELECT_ROW_PER_PAGE_XPATH}
+    Click Element    ${SELECT_ROW_PER_PAGE_XPATH}
+
 *** Test Cases ***
 Verfiy that the user can Filter the Contact
     [Documentation]    Requirement: 42 - Filter Contact
     [Tags]    smoke    critical    login
+    Pagination
     Filter Contact
     Search Contact
     Add Columns

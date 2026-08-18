@@ -6,12 +6,6 @@ Library    SeleniumLibrary
 ${FULL_SCREEN_XPATH}        //span[@class="anticon anticon-fullscreen"]
 ${EXIST_FULL_SCREEN_XPATH}      //span[@class="anticon anticon-fullscreen-exit"]
 
-#Pagination
-${NEXT_ARROW_XPATH}         //li[@title="Next Page"]
-${PREV_ARROW_XPATH}         //li[@title="Previous Page"]
-${ROW_PER_PAGE_XPATH}       //div[@title="20 / page"]
-${SELECT_ROW_PER_PAGE_XPATH}    //div[text()='10 / page']
-
 #Mode
 ${DARH_MODE_XPATH}         (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only"])[2]
 ${LIGHT_MODE_XPATH}         (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only"])[2]

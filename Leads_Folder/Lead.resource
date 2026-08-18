@@ -183,3 +183,9 @@ ${MOBILE_CHECKBOX_XPATH}    //span[text()='Mobile']/ancestor::div[@role='treeite
 ${NOTES_CHECKBOX_XPATH}     //span[text()='Notes']/ancestor::div[@role='treeitem']//span[@role='checkbox']
 ${ACTIONS_CHECKBOX_XPATH}   //span[text()='Actions']/ancestor::div[@role='treeitem']//span[@role='checkbox']
 ${MAIN_XPATH}               //main[@class="ant-layout-content css-xogyor"]
+
+#Pagination
+${NEXT_ARROW_XPATH}         //li[@title="Next Page"]
+${PREV_ARROW_XPATH}         //li[@title="Previous Page"]
+${ROW_PER_PAGE_XPATH}       //div[@title="20 / page"]
+${SELECT_ROW_PER_PAGE_XPATH}    //div[text()='10 / page']

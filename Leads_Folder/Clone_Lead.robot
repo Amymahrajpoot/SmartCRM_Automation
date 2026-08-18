@@ -4,7 +4,7 @@ Resource        Lead.resource
 
 *** Keywords ***
 Clone Lead
-    Set Selenium Speed    0.5s
+    Set Selenium Speed    0.1s
     Click Element    ${MORE_ICON_XPATH}
     Click Element    ${CLONE_OPTION_XPATH}
     Wait Until Element Is Visible    ${CLONE_POPUP_XPATH}    5s
