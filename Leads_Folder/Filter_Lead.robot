@@ -23,8 +23,39 @@ Filter Lead
     Wait Until Element Is Visible    ${FILTERED_ROW_XPATH}      5s
     Log To Console    <<<Row filtered successfully!>>>
 
+
+Search Lead
+    Log To Console    <<<Searching the Lead>>>
+    Click Element    ${SEARCH_BAR_XPATH}
+    Input Text    ${SEARCH_BAR_XPATH}    ${SEARCH_TEXT}
+    Click Element    ${SEARCH_ICON_XPATH}
+    Wait Until Element Is Visible    ${SEARCHED_RECORD_XPATH}   5s
+
+Add Columns
+    #resetting the columns from the table settings
+    Log To Console   <<<Adding Columns from the Table Settings>>>
+    #Landing on the Lead Tab
+#   Click Element    ${LEADS_XPATH}
+    Click Element    ${TABLE_SETTINGS_XPATH}
+    Mouse Out    ${RESET_ICON_XPATH}
+    Sleep    0.5s
+    ${reset_button}=    Get WebElement    ${RESET_ICON_XPATH}
+    Execute Javascript    arguments[0].click()    ARGUMENTS    ${reset_button}
+    Click Element    ${COLUMN_DISPLAY_XPATH}
+    Click Element    ${NAME_CHECKBOX_XPATH}
+    Click Element    ${MOBILE_CHECKBOX_XPATH}
+    ${container1}=    Get WebElement    //div[contains(@class,'ant-tree-list-holder')]
+    Execute JavaScript    arguments[0].scrollTop = arguments[0].scrollHeight;    ARGUMENTS    ${container1}
+    Click Element    ${NOTES_CHECKBOX_XPATH}
+    ${container2}=    Get WebElement    //div[contains(@class,'ant-tree-list-holder')]
+    Execute JavaScript    arguments[0].scrollTop = arguments[0].scrollHeight;    ARGUMENTS    ${container2}
+    Click Element    ${ACTIONS_CHECKBOX_XPATH}
+    Click Element    ${MAIN_XPATH}
+
 *** Test Cases ***
 Verfiy that the user can Filter the Lead
     [Documentation]    Requirement: 42 - Filter lead
     [Tags]    smoke    critical    login
     Filter Lead
+    Search Lead
+    Add Columns

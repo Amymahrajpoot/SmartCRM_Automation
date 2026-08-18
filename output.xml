@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2026-08-13T10:41:42.876474" rpa="false" schemaversion="5">
-<suite id="s1" name="Login &amp; Mode &amp; Full Screen &amp; Pagination &amp; Setup &amp; Logout">
+<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2026-08-18T11:58:13.336032" rpa="false" schemaversion="5">
+<suite id="s1" name="Login &amp; Add Contact &amp; View Contact &amp; Edit Contact &amp; Clone Contact &amp; Filter Contact &amp; Delete Contact">
 <suite id="s1-s1" name="Login" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Login_Folder\Login.robot">
 <kw name="Open My Browser" owner="Login" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:41:44.637176" level="INFO">Opening browser 'Chrome' to base url 'http://172.16.2.87/login'.</msg>
+<msg time="2026-08-18T11:58:15.221267" level="INFO">Opening browser 'Chrome' to base url 'http://172.16.2.87/login'.</msg>
 <arg>http://172.16.2.87/login</arg>
 <arg>Chrome</arg>
 <arg>options=add_experimental_option("detach", True); add_experimental_option("prefs", {"autofill.profile_enabled": False, "autofill.credit_card_enabled": False, "credentials_enable_service": False, "profile.password_manager_enabled": False})</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-08-13T10:41:44.637176" elapsed="12.738886"/>
+<status status="PASS" start="2026-08-18T11:58:15.221267" elapsed="4.138842"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-08-13T10:41:57.376062" elapsed="0.093113"/>
+<status status="PASS" start="2026-08-18T11:58:19.360109" elapsed="0.442997"/>
 </kw>
-<status status="PASS" start="2026-08-13T10:41:44.635816" elapsed="12.833359"/>
+<status status="PASS" start="2026-08-18T11:58:15.220279" elapsed="4.582827"/>
 </kw>
 <test id="s1-s1-t1" name="Verify that the user can login using it.teammobile01@gmail.com and Bss@1234" line="24">
 <kw name="Login Scenario">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-08-13T10:41:59.475829" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-08-18T11:58:21.813530" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-08-13T10:41:57.475359" elapsed="2.000470"/>
+<status status="PASS" start="2026-08-18T11:58:19.813108" elapsed="2.000422"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:41:59.477129" level="INFO">Typing text 'it.teammobile01@gmail.com' into text field '//input[@id='email']'.</msg>
+<msg time="2026-08-18T11:58:21.815593" level="INFO">Typing text 'it.teammobile01@gmail.com' into text field '//input[@id='email']'.</msg>
 <arg>${EMAIL_FIELD_XPATH}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:41:59.475829" elapsed="0.423640"/>
+<status status="PASS" start="2026-08-18T11:58:21.814622" elapsed="0.322900"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:41:59.900479" level="INFO">Typing password into text field '//input[@id='password']'.</msg>
-<msg time="2026-08-13T10:41:59.949293" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-08-18T11:58:22.138525" level="INFO">Typing password into text field '//input[@id='password']'.</msg>
+<msg time="2026-08-18T11:58:22.176520" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PASSWORD_FIELD_XPATH}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:41:59.900186" elapsed="0.378097"/>
+<status status="PASS" start="2026-08-18T11:58:22.137522" elapsed="0.150000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:00.279287" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<msg time="2026-08-18T11:58:22.288523" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
 <arg>${LOGIN_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:00.279287" elapsed="0.133410"/>
+<status status="PASS" start="2026-08-18T11:58:22.288523" elapsed="0.103001"/>
 </kw>
 <if>
 <branch type="IF" condition="'${email}' == 'it.teammobile01@gmail.com' and '${password}' == 'Bss@1234'">
@@ -52,303 +52,1387 @@
 <arg>${SUCCESS_ELEMENT_XPATH}</arg>
 <arg>15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-13T10:42:00.418695" elapsed="0.875985"/>
+<status status="PASS" start="2026-08-18T11:58:22.392527" elapsed="1.584902"/>
 </kw>
-<status status="PASS" start="2026-08-13T10:42:00.412697" elapsed="0.882709"/>
+<status status="PASS" start="2026-08-18T11:58:22.391524" elapsed="1.585905"/>
 </branch>
 <branch type="ELSE">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
 <arg>Please check your email and password.</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2026-08-13T10:42:01.295406" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-18T11:58:23.977429" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-08-13T10:42:01.295406" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-18T11:58:23.977429" elapsed="0.000990"/>
 </branch>
-<status status="PASS" start="2026-08-13T10:42:00.412697" elapsed="0.882709"/>
+<status status="PASS" start="2026-08-18T11:58:22.391524" elapsed="1.586895"/>
 </if>
 <arg>email=it.teammobile01@gmail.com</arg>
 <arg>password=Bss@1234</arg>
-<status status="PASS" start="2026-08-13T10:41:57.473760" elapsed="3.821646"/>
+<status status="PASS" start="2026-08-18T11:58:19.812107" elapsed="4.166312"/>
 </kw>
 <doc>Test has only tag 'requirement: 42'.</doc>
 <tag>critical</tag>
 <tag>login</tag>
 <tag>smoke</tag>
-<status status="PASS" start="2026-08-13T10:41:57.469175" elapsed="3.827231"/>
+<status status="PASS" start="2026-08-18T11:58:19.803106" elapsed="4.175313"/>
 </test>
-<status status="PASS" start="2026-08-13T10:41:42.935226" elapsed="18.362281"/>
+<status status="PASS" start="2026-08-18T11:58:13.411027" elapsed="10.568391"/>
 </suite>
-<suite id="s1-s2" name="Mode" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\SmartCRM_Dashboard_Folder\Mode.robot">
-<test id="s1-s2-t1" name="Verify that the user can change the mode of the application" line="14">
-<kw name="Setting Mode">
+<suite id="s1-s2" name="Add Contact" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Contacts_Folder\Add_Contact.robot">
+<test id="s1-s2-t1" name="Verfiy that the user can create the Contact using" line="135">
+<kw name="Create Contact">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Checking if Contact already exists&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:24.068419" elapsed="0.000000"/>
+</kw>
+<kw name="Check Contact Exists">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:24.069432" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-/collections/contacts"]'.</msg>
+<arg>${CONTACTS_OPTION_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:24.069432" elapsed="0.114987"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONTACTS_PAGE_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:24.184419" elapsed="0.230999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_BAR_XPATH}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:24.415418" elapsed="0.021004"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:24.437418" level="INFO">Typing text 'Jon' into text field '//input[@placeholder="Search..."]'.</msg>
+<arg>${SEARCH_BAR_XPATH}</arg>
+<arg>${contact_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:24.436422" elapsed="0.133997"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:24.571421" level="INFO">Clicking element '//span[@class="anticon anticon-search"]'.</msg>
+<arg>${SEARCH_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:24.570419" elapsed="0.121998"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-08-18T11:58:25.692960" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-08-18T11:58:24.692417" elapsed="1.000543"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:25.738989" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>//a[text()='${contact_name}']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:25.694076" elapsed="0.045945"/>
+</kw>
+<if>
+<branch type="IF" condition="${count} &gt; 0">
+<return>
+<value>${TRUE}</value>
+<status status="NOT RUN" start="2026-08-18T11:58:25.741020" elapsed="0.000000"/>
+</return>
+<status status="NOT RUN" start="2026-08-18T11:58:25.740021" elapsed="0.000999"/>
+</branch>
+<branch type="ELSE">
+<return>
+<value>${FALSE}</value>
+<status status="PASS" start="2026-08-18T11:58:25.741020" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2026-08-18T11:58:25.741020" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2026-08-18T11:58:25.740021" elapsed="0.002002"/>
+</if>
+<msg time="2026-08-18T11:58:25.742023" level="INFO">${Contact_exists} = False</msg>
+<var>${Contact_exists}</var>
+<arg>${FIRSTNAME_FIELD_TEXT}</arg>
+<status status="PASS" start="2026-08-18T11:58:24.069432" elapsed="1.672591"/>
+</kw>
+<if>
+<branch type="IF" condition="${Contact_exists}">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Contact "${FIRSTNAME_FIELD_TEXT}" already exists, skipping creation&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-08-18T11:58:25.743020" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-08-18T11:58:25.743020" elapsed="0.001006"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Contact does not exist, proceeding to create&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:25.744026" elapsed="0.001965"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:25.747985" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid ant-btn-sm"])[3]'.</msg>
+<arg>${ADD_BUTTON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:25.746988" elapsed="0.243993"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_RECORD_POPUP_XPATH}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:25.990981" elapsed="0.261058"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Validating Email on Add Lead popup&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:26.252039" elapsed="0.000960"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:26.252999" level="INFO">Clicking element '//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]'.</msg>
+<arg>${CREATE_BTN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:26.252999" elapsed="0.093005"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONTACT_EMAIL_VALIDATION_MSG_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:26.346004" elapsed="0.254680"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Contact cannot be added since Email field is empty&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:26.600684" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Adding Contact Information&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:26.601686" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:26.601686" level="INFO">Clicking element '//input[@id="Title"]'.</msg>
+<arg>${TITLE_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:26.601686" elapsed="0.102151"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:26.704850" level="INFO">Typing text 'Test Contact' into text field '//input[@id="Title"]'.</msg>
+<arg>${TITLE_FIELD_XPATH}</arg>
+<arg>${TITLE_FIELD_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:26.703837" elapsed="0.119000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:26.822837" level="INFO">Clicking element '//input[@id="FirstName"]'.</msg>
+<arg>${FIRST_NAME_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:26.822837" elapsed="0.082998"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:26.906835" level="INFO">Typing text 'Jon' into text field '//input[@id="FirstName"]'.</msg>
+<arg>${FIRST_NAME_FIELD_XPATH}</arg>
+<arg>${FIRSTNAME_FIELD_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:26.905835" elapsed="0.079999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:26.985834" level="INFO">Clicking element '//input[@id="LastName"]'.</msg>
+<arg>${LAST_NAME_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:26.985834" elapsed="0.081000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:27.067844" level="INFO">Typing text 'Lia' into text field '//input[@id="LastName"]'.</msg>
+<arg>${LAST_NAME_FIELD_XPATH}</arg>
+<arg>${LASTNAME_FIELD_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:27.067844" elapsed="0.077990"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MOBILE_CODE_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:27.145834" elapsed="0.024997"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:27.171833" level="INFO">Clicking element '(//div[@class="ant-select-content"]/child::input)[1]'.</msg>
+<arg>${MOBILE_CODE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:27.170831" elapsed="0.118002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:27.289832" level="INFO">Typing text '92' into text field '(//div[@class="ant-select-content"]/child::input)[1]'.</msg>
+<arg>${MOBILE_CODE_XPATH}</arg>
+<arg>${MOBILE_CODE_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:27.288833" elapsed="0.081001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:27.370832" level="INFO">Clicking element '//div[@title="🇵🇰 +92"]'.</msg>
+<arg>${SELECT_MOBILE_CODE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:27.370832" elapsed="0.090004"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:27.461833" level="INFO">Clicking element '(//input[@placeholder="Phone number"])[1]'.</msg>
+<arg>${MOBILE_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:27.461833" elapsed="0.097003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:27.559833" level="INFO">Typing text '8394829842' into text field '(//input[@placeholder="Phone number"])[1]'.</msg>
+<arg>${MOBILE_FIELD_XPATH}</arg>
+<arg>${MOBILE_NUMBER_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:27.558836" elapsed="0.121996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:27.681833" level="INFO">Clicking element '(//div[contains(@class,'ant-form-item')][.//label[text()='Phone']]//input[@class='ant-select-input'])[1]'.</msg>
+<arg>${PHONE_CODE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:27.680832" elapsed="0.102002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:27.783836" level="INFO">Typing text '92' into text field '(//div[contains(@class,'ant-form-item')][.//label[text()='Phone']]//input[@class='ant-select-input'])[1]'.</msg>
+<arg>${PHONE_CODE_XPATH}</arg>
+<arg>${PHONE_CODE_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:27.782834" elapsed="0.075033"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-08-18T11:58:28.859166" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-08-18T11:58:27.857867" elapsed="1.001299"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:28.863223" level="INFO">Sending key(s) ('RETURN',) to (//div[contains(@class,'ant-form-item')][.//label[text()='Phone']]//input[@class='ant-select-input'])[1] element.</msg>
+<msg time="2026-08-18T11:58:29.200250" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2026-08-18T11:58:29.200250" level="INFO">Releasing special key RETURN.</msg>
+<arg>${PHONE_CODE_XPATH}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-08-18T11:58:28.861225" elapsed="0.372026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:29.234249" level="INFO">Clicking element '(//input[@placeholder="Phone number"])[2]'.</msg>
+<arg>${PHONE_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:29.233251" elapsed="0.115996"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:29.350250" level="INFO">Typing text '4535464' into text field '(//input[@placeholder="Phone number"])[2]'.</msg>
+<arg>${PHONE_FIELD_XPATH}</arg>
+<arg>${PHONE_NUMBER_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:29.349247" elapsed="0.135003"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:29.485250" level="INFO">Clicking element '//input[@id="Email"]'.</msg>
+<arg>${EMAIL_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:29.485250" elapsed="0.088994"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:29.576251" level="INFO">Typing text 'Jonlia01@gmail.com' into text field '//input[@id="Email"]'.</msg>
+<arg>${EMAIL_FIELD_XPATH}</arg>
+<arg>${EMAIL_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:29.574244" elapsed="0.248002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:29.823247" level="INFO">Clicking element '//input[@id="Updates"]'.</msg>
+<arg>${UPDATES_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:29.823247" elapsed="0.109003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:29.933249" level="INFO">Typing text 'Jon Lia Contact' into text field '//input[@id="Updates"]'.</msg>
+<arg>${UPDATES_FIELD_XPATH}</arg>
+<arg>${UPDATES_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:29.932250" elapsed="0.128999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:30.062248" level="INFO">Clicking element '//input[@id="AccountId"]'.</msg>
+<arg>${ACCOUNTNAME_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:30.062248" elapsed="0.114003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:30.177251" level="INFO">Typing text 'Test Lead' into text field '//input[@id="AccountId"]'.</msg>
+<arg>${ACCOUNTNAME_DROPDOWN_XPATH}</arg>
+<arg>${ACCOUNT_NAME_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:30.176251" elapsed="0.134996"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-08-18T11:58:30.312247" level="INFO">${ACCOUNT_OPTION_XPATH} = xpath=//div[contains(@class,"ant-select-item-option") and normalize-space(.)="Test Lead"]</msg>
+<var>${ACCOUNT_OPTION_XPATH}</var>
+<arg>xpath=//div[contains(@class,"ant-select-item-option") and normalize-space(.)="${ACCOUNT_NAME_TEXT}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-08-18T11:58:30.312247" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ACCOUNT_OPTION_XPATH}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:30.313251" elapsed="0.663710"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:30.977959" level="INFO">Clicking element 'xpath=//div[contains(@class,"ant-select-item-option") and normalize-space(.)="Test Lead"]'.</msg>
+<arg>${ACCOUNT_OPTION_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:30.977959" elapsed="0.091008"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:31.069964" level="INFO">Clicking element '//input[@id="reportToId"]'.</msg>
+<arg>${REPORT_TO_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:31.068967" elapsed="0.119993"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SELECT_REPORT_TO_DROPDOWN_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:31.188960" elapsed="0.245002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:31.434961" level="INFO">Clicking element '//div[@title="Admin User"]'.</msg>
+<arg>${SELECT_REPORT_TO_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:31.434961" elapsed="0.075004"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:31.510962" level="INFO">Clicking element '//input[@id="OwnerId"]'.</msg>
+<arg>${CONTACTOWNER_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:31.509965" elapsed="0.112996"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SELECT_CONTACTOWNER_DROPDOWN_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:31.623965" elapsed="0.262997"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:31.887962" level="INFO">Clicking element '(//div[@title="Test Bss"])[2]'.</msg>
+<arg>${SELECT_CONTACTOWNER_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:31.886962" elapsed="0.117999"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Adding Address information&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:32.005961" elapsed="0.003999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:32.010963" level="INFO">Clicking element '//input[@id="MailingAddress"]'.</msg>
+<arg>${MAILINGADDRESS_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:32.009960" elapsed="0.126006"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:32.136966" level="INFO">Typing text 'street no. 8 rehmat colony' into text field '//input[@id="MailingAddress"]'.</msg>
+<arg>${MAILINGADDRESS_FIELD_XPATH}</arg>
+<arg>${MAILING_ADDRESS_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:32.135966" elapsed="0.212994"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:32.348960" level="INFO">Clicking element '//input[@id="otherAddress"]'.</msg>
+<arg>${OTHERADDRESS_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:32.348960" elapsed="0.102002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:32.451973" level="INFO">Typing text 'block J, rifa colony' into text field '//input[@id="otherAddress"]'.</msg>
+<arg>${OTHERADDRESS_FIELD_XPATH}</arg>
+<arg>${OTHER_ADDRESS_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:32.450962" elapsed="0.173001"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Adding Description information&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:32.623963" elapsed="0.007998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:32.631961" level="INFO">Clicking element '//input[@id="Description"]'.</msg>
+<arg>${DESCRIPTION_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:32.631961" elapsed="0.109002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:32.741961" level="INFO">Typing text 'Creating Jon Lis contact' into text field '//input[@id="Description"]'.</msg>
+<arg>${DESCRIPTION_FIELD_XPATH}</arg>
+<arg>${DESCRIPTION_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:32.740963" elapsed="0.186000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Adding Additional information&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:32.926963" elapsed="0.001004"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:32.928963" level="INFO">Clicking element '//input[@id="Birthdate"]'.</msg>
+<arg>${BIRTHDAY_CALENDAR_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:32.927967" elapsed="0.146995"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${YEAR_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:33.074962" elapsed="0.241358"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:33.317318" level="INFO">Clicking element '//button[@class="ant-picker-year-btn"]'.</msg>
+<arg>${YEAR_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:33.317318" elapsed="0.149001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:33.467319" level="INFO">Clicking element '//button[@class="ant-picker-header-super-prev-btn"]'.</msg>
+<arg>${PREV_BTN_YEAR_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:33.466319" elapsed="0.104002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:33.570321" level="INFO">Clicking element '//button[@class="ant-picker-header-super-prev-btn"]'.</msg>
+<arg>${PREV_BTN_YEAR_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:33.570321" elapsed="0.072000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SELECT_YEAR_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:33.642321" elapsed="0.021002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:33.664317" level="INFO">Clicking element '//td[@title="2001"]'.</msg>
+<arg>${SELECT_YEAR_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:33.663323" elapsed="0.097996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:33.762318" level="INFO">Clicking element '//div[text()='Sep']'.</msg>
+<arg>${SELECT_MONTH_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:33.762318" elapsed="0.106001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:33.868319" level="INFO">Clicking element '//td[@title="2001-09-07"]'.</msg>
+<arg>${SELECT_DATE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:33.868319" elapsed="0.100000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:33.969324" level="INFO">Clicking element '(//div[contains(@class,'ant-form-item')][.//label[text()='Home Phone']]//input[@class='ant-select-input'])'.</msg>
+<arg>${HOMEPHONE_CODE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:33.968319" elapsed="0.109997"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:34.078316" level="INFO">Typing text '58' into text field '(//div[contains(@class,'ant-form-item')][.//label[text()='Home Phone']]//input[@class='ant-select-input'])'.</msg>
+<arg>${HOMEPHONE_CODE_XPATH}</arg>
+<arg>${HOME_PHONE_CODE_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:34.078316" elapsed="0.090002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:34.168318" level="INFO">Clicking element '//div[@title="🇫🇮 +358"]'.</msg>
+<arg>${SELECT_HOMEPHONE_CODE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:34.168318" elapsed="0.098000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:34.266318" level="INFO">Clicking element '(//input[@placeholder="Phone number"])[3]'.</msg>
+<arg>${HOMEPHONE_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:34.266318" elapsed="0.110002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:34.377317" level="INFO">Typing text '3535242443' into text field '(//input[@placeholder="Phone number"])[3]'.</msg>
+<arg>${HOMEPHONE_FIELD_XPATH}</arg>
+<arg>${HOME_PHONE_NUMBER_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:34.377317" elapsed="0.128021"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:34.506318" level="INFO">Clicking element '(//div[contains(@class,'ant-form-item')][.//label[text()='Other Phone']]//input[@class='ant-select-input'])'.</msg>
+<arg>${OTHERPHONE_CODE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:34.505338" elapsed="0.090978"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:34.597316" level="INFO">Typing text '71' into text field '(//div[contains(@class,'ant-form-item')][.//label[text()='Other Phone']]//input[@class='ant-select-input'])'.</msg>
+<arg>${OTHERPHONE_CODE_XPATH}</arg>
+<arg>${OTHER_PHONE_CODE_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:34.596316" elapsed="0.086002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:34.683317" level="INFO">Clicking element '//div[@title="🇬🇺 +1671"]'.</msg>
+<arg>${SELECT_OTHERPHONE_CODE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:34.682318" elapsed="0.093001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:34.776319" level="INFO">Clicking element '(//input[@placeholder="Phone number"])[4]'.</msg>
+<arg>${OTHERPHONE_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:34.776319" elapsed="0.095008"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:34.872321" level="INFO">Typing text '3443535456' into text field '(//input[@placeholder="Phone number"])[4]'.</msg>
+<arg>${OTHERPHONE_FIELD_XPATH}</arg>
+<arg>${OTHER_PHONE_NUMBER_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:34.871327" elapsed="0.129992"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:35.001319" level="INFO">Clicking element '(//div[contains(@class,'ant-form-item')][.//label[text()='Assistant Phone']]//input[@class='ant-select-input'])'.</msg>
+<arg>${ASSISTANTPHONE_CODE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:35.001319" elapsed="0.106007"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:35.108319" level="INFO">Typing text '21' into text field '(//div[contains(@class,'ant-form-item')][.//label[text()='Assistant Phone']]//input[@class='ant-select-input'])'.</msg>
+<arg>${ASSISTANTPHONE_CODE_XPATH}</arg>
+<arg>${ASSISTANT_PHONE_CODE_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:35.107326" elapsed="0.094990"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:35.204318" level="INFO">Clicking element '//div[@title="🇩🇿 +213"]'.</msg>
+<arg>${SELECT_ASSISTANTPHONE_CODE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:35.204318" elapsed="0.110005"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:35.315318" level="INFO">Clicking element '(//input[@placeholder="Phone number"])[5]'.</msg>
+<arg>${ASSISTANTPHONE_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:35.314323" elapsed="0.115996"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:35.431319" level="INFO">Typing text '8394892842' into text field '(//input[@placeholder="Phone number"])[5]'.</msg>
+<arg>${ASSISTANTPHONE_FIELD_XPATH}</arg>
+<arg>${ASSISTANT_PHONE_NUMBER_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:35.431319" elapsed="0.119999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:35.551318" level="INFO">Clicking element '//input[@id="AssisstantName"]'.</msg>
+<arg>${ASSISTANT_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:35.551318" elapsed="0.101001"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:35.654319" level="INFO">Typing text 'David' into text field '//input[@id="AssisstantName"]'.</msg>
+<arg>${ASSISTANT_FIELD_XPATH}</arg>
+<arg>${ASSISTANT_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:35.653318" elapsed="0.108002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:35.762320" level="INFO">Clicking element '//input[@id="LastStayInTouch"]'.</msg>
+<arg>${LAST_STAY_IN_TOIUCH_CALENDAR_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:35.762320" elapsed="0.121998"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-08-18T11:58:37.885708" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-08-18T11:58:35.884318" elapsed="2.001390"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:37.886777" level="INFO">Clicking element '(//button[@class="ant-picker-header-prev-btn"])[2]'.</msg>
+<arg>${PREVIOUS_BTN_CALENDAR_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:37.885708" elapsed="0.113405"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:38.001116" level="INFO">Clicking element '(//button[@class="ant-picker-header-prev-btn"])[2]'.</msg>
+<arg>${PREVIOUS_BTN_CALENDAR_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:38.000116" elapsed="0.095122"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SELECT_LAST_STAY_IN_TOIUCH_CALENDAR_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:38.095238" elapsed="0.025998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:38.122235" level="INFO">Clicking element '//td[@title="2026-06-02"]'.</msg>
+<arg>${SELECT_LAST_STAY_IN_TOIUCH_CALENDAR_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:38.121236" elapsed="0.085002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:38.206238" level="INFO">Clicking element '//input[@id="Department"]'.</msg>
+<arg>${DEPT_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:38.206238" elapsed="0.091998"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:38.299237" level="INFO">Typing text 'Finance' into text field '//input[@id="Department"]'.</msg>
+<arg>${DEPT_FIELD_XPATH}</arg>
+<arg>${DEPARTMENT_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:38.298236" elapsed="0.095002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:38.393238" level="INFO">Clicking element '//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]'.</msg>
+<arg>${CREATE_BTN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:38.393238" elapsed="0.075004"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CREATE_SUCCESS_MSG_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:38.468242" elapsed="0.507994"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Contact Created Successfully!&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:38.976236" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2026-08-18T11:58:25.744026" elapsed="13.233210"/>
+</branch>
+<status status="PASS" start="2026-08-18T11:58:25.743020" elapsed="13.234216"/>
+</if>
+<arg>TITLE_FIELD_TEXT=Test Contact</arg>
+<arg>FIRSTNAME_FIELD_TEXT=Jon</arg>
+<arg>LASTNAME_FIELD_TEXT=Lia</arg>
+<arg>MOBILE_CODE_TEXT=92</arg>
+<arg>MOBILE_NUMBER_TEXT=8394829842</arg>
+<arg>PHONE_CODE_TEXT=92</arg>
+<arg>PHONE_NUMBER_TEXT=4535464</arg>
+<arg>EMAIL_TEXT=Jonlia01@gmail.com</arg>
+<arg>UPDATES_TEXT=Jon Lia Contact</arg>
+<arg>ACCOUNT_NAME_TEXT=Test Lead</arg>
+<arg>MAILING_ADDRESS_TEXT=street no. 8 rehmat colony</arg>
+<arg>OTHER_ADDRESS_TEXT=block J, rifa colony</arg>
+<arg>DESCRIPTION_TEXT=Creating Jon Lis contact</arg>
+<arg>HOME_PHONE_CODE_TEXT=58</arg>
+<arg>HOME_PHONE_NUMBER_TEXT=3535242443</arg>
+<arg>OTHER_PHONE_CODE_TEXT=71</arg>
+<arg>OTHER_PHONE_NUMBER_TEXT=3443535456</arg>
+<arg>ASSISTANT_PHONE_CODE_TEXT=21</arg>
+<arg>ASSISTANT_PHONE_NUMBER_TEXT=8394892842</arg>
+<arg>ASSISTANT_TEXT=David</arg>
+<arg>DEPARTMENT_TEXT=Finance</arg>
+<status status="PASS" start="2026-08-18T11:58:24.066417" elapsed="14.910819"/>
+</kw>
+<doc>Requirement: 42 - create the Contact</doc>
+<tag>smoke</tag>
+<status status="PASS" start="2026-08-18T11:58:24.060419" elapsed="14.916817"/>
+</test>
+<status status="PASS" start="2026-08-18T11:58:23.982420" elapsed="14.995816"/>
+</suite>
+<suite id="s1-s3" name="View Contact" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Contacts_Folder\View_Contact.robot">
+<test id="s1-s3-t1" name="Verfiy that the user can View the Contact" line="16">
+<kw name="View Contact">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Viewing Contact&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:38.994237" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:38.995243" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-/collections/contacts"]'.</msg>
+<arg>${CONTACTS_OPTION_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:38.994237" elapsed="0.178999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:39.173236" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]'.</msg>
+<arg>${MORE_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:39.173236" elapsed="0.095999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${VIEW_ICON_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:39.269235" elapsed="0.247745"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:39.517979" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-view"]'.</msg>
+<arg>${VIEW_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:39.516980" elapsed="0.117603"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${VIEW_CONTACT_PAGE_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:39.634583" elapsed="0.248292"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:39.882875" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only"])[5]'.</msg>
+<arg>${BACK_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:39.882875" elapsed="0.211108"/>
+</kw>
+<status status="PASS" start="2026-08-18T11:58:38.993237" elapsed="1.101747"/>
+</kw>
+<doc>Requirement: 42 - View Contact</doc>
+<tag>critical</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2026-08-18T11:58:38.992239" elapsed="1.102745"/>
+</test>
+<status status="PASS" start="2026-08-18T11:58:38.979234" elapsed="1.116748"/>
+</suite>
+<suite id="s1-s4" name="Edit Contact" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Contacts_Folder\Edit_Contact.robot">
+<test id="s1-s4-t1" name="Verfiy that the user can Edit/Update the Contact" line="37">
+<kw name="Edit Contact">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Editing the Contact&gt;&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:40.113986" elapsed="0.002001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:40.115987" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]'.</msg>
+<arg>${MORE_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:40.115987" elapsed="0.171998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EDIT_ICON_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:40.288984" elapsed="0.260141"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:40.550130" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-edit"]'.</msg>
+<arg>${EDIT_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:40.549125" elapsed="0.202740"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EDIT_CONTACT_POPUP_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:40.751865" elapsed="0.260167"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:41.013034" level="INFO">Clicking element '//input[@id="Title"]'.</msg>
+<arg>${TITLE_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:41.012032" elapsed="0.107139"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:41.120172" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="Title"] element.</msg>
+<msg time="2026-08-18T11:58:41.459166" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2026-08-18T11:58:41.459166" level="INFO">Sending key A</msg>
+<msg time="2026-08-18T11:58:41.459166" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg time="2026-08-18T11:58:41.459166" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2026-08-18T11:58:41.460204" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${TITLE_FIELD_XPATH}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-08-18T11:58:41.119171" elapsed="0.394981"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:41.515149" level="INFO">Typing text 'Amymah' into text field '//input[@id="Title"]'.</msg>
+<arg>${TITLE_FIELD_XPATH}</arg>
+<arg>${TITLE_FIELD_EDITED_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:41.514152" elapsed="0.075998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:41.590150" level="INFO">Clicking element '//input[@id="FirstName"]'.</msg>
+<arg>${FIRST_NAME_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:41.590150" elapsed="0.075001"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:41.668152" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="FirstName"] element.</msg>
+<msg time="2026-08-18T11:58:41.961136" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2026-08-18T11:58:41.961136" level="INFO">Sending key A</msg>
+<msg time="2026-08-18T11:58:41.962124" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg time="2026-08-18T11:58:41.962124" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2026-08-18T11:58:41.962124" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${FIRST_NAME_FIELD_XPATH}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-08-18T11:58:41.666156" elapsed="0.320543"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:41.987733" level="INFO">Typing text 'Amymahtest' into text field '//input[@id="FirstName"]'.</msg>
+<arg>${FIRST_NAME_FIELD_XPATH}</arg>
+<arg>${FIRST_NAME_FIELD_EDITED_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:41.986699" elapsed="0.114592"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:42.102290" level="INFO">Clicking element '//input[@id="LastName"]'.</msg>
+<arg>${LAST_NAME_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:42.101291" elapsed="0.059999"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:42.163290" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="LastName"] element.</msg>
+<msg time="2026-08-18T11:58:42.474527" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2026-08-18T11:58:42.474527" level="INFO">Sending key A</msg>
+<msg time="2026-08-18T11:58:42.475527" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg time="2026-08-18T11:58:42.475527" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2026-08-18T11:58:42.475527" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${LAST_NAME_FIELD_XPATH}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-08-18T11:58:42.162290" elapsed="0.360022"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:42.523313" level="INFO">Typing text 'usman' into text field '//input[@id="LastName"]'.</msg>
+<arg>${LAST_NAME_FIELD_XPATH}</arg>
+<arg>${LAST_NAME_FIELD_EDITED_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:42.523313" elapsed="0.081000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:42.605311" level="INFO">Clicking element '//input[@id="Email"]'.</msg>
+<arg>${EMAIL_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:42.604313" elapsed="0.069998"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:42.675315" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="Email"] element.</msg>
+<msg time="2026-08-18T11:58:42.992152" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2026-08-18T11:58:42.993158" level="INFO">Sending key A</msg>
+<msg time="2026-08-18T11:58:42.993158" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg time="2026-08-18T11:58:42.993158" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2026-08-18T11:58:42.993158" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${EMAIL_FIELD_XPATH}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-08-18T11:58:42.675315" elapsed="0.376958"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:43.053275" level="INFO">Typing text 'amymahtest@gmail.com' into text field '//input[@id="Email"]'.</msg>
+<arg>${EMAIL_FIELD_XPATH}</arg>
+<arg>${EMAIL_FIELD_EDITED_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:43.052273" elapsed="0.217996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:43.270269" level="INFO">Clicking element '//input[@id="Updates"]'.</msg>
+<arg>${UPDATES_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:43.270269" elapsed="0.100998"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:43.372270" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="Updates"] element.</msg>
+<msg time="2026-08-18T11:58:43.675339" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2026-08-18T11:58:43.676338" level="INFO">Sending key A</msg>
+<msg time="2026-08-18T11:58:43.676338" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg time="2026-08-18T11:58:43.676338" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2026-08-18T11:58:43.676338" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${UPDATES_FIELD_XPATH}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-08-18T11:58:43.371267" elapsed="0.354065"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:43.726333" level="INFO">Typing text 'updating amymatest contact' into text field '//input[@id="Updates"]'.</msg>
+<arg>${UPDATES_FIELD_XPATH}</arg>
+<arg>${UPDATES_FIELD_EDITED_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:43.725332" elapsed="0.154993"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:43.881327" level="INFO">Clicking element '//input[@id="reportToId"]'.</msg>
+<arg>${REPORT_TO_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:43.880325" elapsed="0.085999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SELECT_REPORT_TO_DROPDOWN_EDITED_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:43.967323" elapsed="0.248450"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:44.215773" level="INFO">Clicking element '//div[@title="Ashfaq Ali"]'.</msg>
+<arg>${SELECT_REPORT_TO_DROPDOWN_EDITED_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:44.215773" elapsed="0.073498"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:44.290276" level="INFO">Clicking element '//input[@id="OwnerId"]'.</msg>
+<arg>${CONTACTOWNER_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:44.289271" elapsed="0.116002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SELECT_CONTACTOWNER_DROPDOWN_EDITED_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:44.405273" elapsed="0.273191"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:44.679470" level="INFO">Clicking element '(//div[@title="Admin User"])[2]'.</msg>
+<arg>${SELECT_CONTACTOWNER_DROPDOWN_EDITED_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:44.678464" elapsed="0.092596"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:44.772066" level="INFO">Clicking element '//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]'.</msg>
+<arg>${UPDATE_BTN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:44.771060" elapsed="0.089101"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EDITED_SUCCESS_MSG_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:44.861158" elapsed="0.295999"/>
+</kw>
+<status status="PASS" start="2026-08-18T11:58:40.113986" elapsed="5.043171"/>
+</kw>
+<doc>Requirement: 42 - Update the Contact</doc>
+<tag>smoke</tag>
+<status status="PASS" start="2026-08-18T11:58:40.107980" elapsed="5.049177"/>
+</test>
+<status status="PASS" start="2026-08-18T11:58:40.097982" elapsed="5.060175"/>
+</suite>
+<suite id="s1-s5" name="Clone Contact" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Contacts_Folder\Clone_Contact.robot">
+<test id="s1-s5-t1" name="Verfiy that the user can Clone the Contact" line="17">
+<kw name="Clone Contact">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:45.176165" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]'.</msg>
+<arg>${MORE_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:45.175163" elapsed="0.140998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:45.316161" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-clone"]'.</msg>
+<arg>${CLONE_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:45.316161" elapsed="0.203998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CLONE_CONTACT_POPUP_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:45.520159" elapsed="0.249999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CLONE_BTN_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:45.771160" elapsed="0.019997"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:45.792157" level="INFO">Clicking element '//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]'.</msg>
+<arg>${CLONE_BTN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:45.792157" elapsed="0.167005"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CLONE_SUCCESS_MSG_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:45.959162" elapsed="0.289117"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Contact cloned successfully!&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:46.248279" elapsed="0.000999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:46.250282" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only"])[5]'.</msg>
+<arg>${BACK_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:46.249278" elapsed="0.201001"/>
+</kw>
+<status status="PASS" start="2026-08-18T11:58:45.175163" elapsed="1.275116"/>
+</kw>
+<doc>Requirement: 42 - clone Contact</doc>
+<tag>critical</tag>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2026-08-18T11:58:45.174157" elapsed="1.277124"/>
+</test>
+<status status="PASS" start="2026-08-18T11:58:45.159157" elapsed="1.293122"/>
+</suite>
+<suite id="s1-s6" name="Filter Contact" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Contacts_Folder\Filter_Contact.robot">
+<test id="s1-s6-t1" name="Verfiy that the user can Filter the Contact" line="59">
+<kw name="Filter Contact">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Filter Contact from the Contacts list&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:46.470287" elapsed="0.000000"/>
+</kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>0.5s</arg>
+<arg>0.1s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2026-08-13T10:42:01.318528" elapsed="0.000842"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>&lt;&lt;&lt;Setting mode to the dark&gt;&gt;&gt;</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-13T10:42:01.319370" elapsed="0.001213"/>
+<status status="PASS" start="2026-08-18T11:58:46.470287" elapsed="0.000997"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:01.321340" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only"])[2]'.</msg>
-<arg>${DARH_MODE_XPATH}</arg>
+<msg time="2026-08-18T11:58:46.471284" level="INFO">Clicking element '//span[@class="ant-badge css-xogyor css-var-_r_0_"]'.</msg>
+<arg>${FILTER_BTN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:01.321108" elapsed="1.883606"/>
+<status status="PASS" start="2026-08-18T11:58:46.471284" elapsed="0.330298"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>&lt;&lt;&lt;Setting mode to the light&gt;&gt;&gt;</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-13T10:42:03.205338" elapsed="0.000000"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FILTER_POPUP_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:46.801582" elapsed="0.231098"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:03.206311" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only"])[2]'.</msg>
-<arg>${LIGHT_MODE_XPATH}</arg>
+<msg time="2026-08-18T11:58:47.033475" level="INFO">Clicking element '//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-dashed ant-btn-color-default ant-btn-variant-dashed ant-btn-sm ant-btn-block"]'.</msg>
+<arg>${ADD_CONDITION_BTN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:03.205338" elapsed="1.475175"/>
-</kw>
-<status status="PASS" start="2026-08-13T10:42:01.318507" elapsed="3.362006"/>
-</kw>
-<doc>Requirement: 42 - Set Mode</doc>
-<tag>critical</tag>
-<tag>smoke</tag>
-<status status="PASS" start="2026-08-13T10:42:01.317316" elapsed="3.363727"/>
-</test>
-<status status="PASS" start="2026-08-13T10:42:01.300730" elapsed="3.380787"/>
-</suite>
-<suite id="s1-s3" name="Full Screen" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\SmartCRM_Dashboard_Folder\Full_Screen.robot">
-<test id="s1-s3-t1" name="Verify that the user can fit the screen to full screen and exist the full screen." line="13">
-<kw name="Full Screen">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>&lt;&lt;&lt;fitting screen to full screen&gt;&gt;&gt;</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-13T10:42:04.693418" elapsed="0.000938"/>
+<status status="PASS" start="2026-08-18T11:58:47.033475" elapsed="0.317619"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:04.695356" level="INFO">Clicking element '//span[@class="anticon anticon-fullscreen"]'.</msg>
-<arg>${FULL_SCREEN_XPATH}</arg>
+<msg time="2026-08-18T11:58:47.351094" level="INFO">Clicking element '(//div[@class="ant-flex css-xogyor css-var-_r_0_ ant-flex-align-center ant-flex-gap-small"]/child::div)[3]'.</msg>
+<arg>${TITLE_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:04.694904" elapsed="1.319330"/>
+<status status="PASS" start="2026-08-18T11:58:47.351094" elapsed="0.313962"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>&lt;&lt;&lt;existing full screen&gt;&gt;&gt;</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-13T10:42:06.014234" elapsed="0.000961"/>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${SELECT_TITLE_XPATH}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-08-18T11:58:47.665056" elapsed="0.498647"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:06.015195" level="INFO">Clicking element '//span[@class="anticon anticon-fullscreen-exit"]'.</msg>
-<arg>${EXIST_FULL_SCREEN_XPATH}</arg>
+<msg time="2026-08-18T11:58:48.164667" level="INFO">Clicking element '//div[text()='Assistant']'.</msg>
+<arg>${SELECT_TITLE_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:06.015195" elapsed="1.224763"/>
+<status status="PASS" start="2026-08-18T11:58:48.163703" elapsed="0.344230"/>
 </kw>
-<status status="PASS" start="2026-08-13T10:42:04.693418" elapsed="2.546540"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:48.508963" level="INFO">Clicking element '//div[@title="is equal to"]'.</msg>
+<arg>${CONDITION_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:48.507933" elapsed="0.304468"/>
 </kw>
-<doc>Requirement: 42 - Full Screen</doc>
-<tag>critical</tag>
-<tag>smoke</tag>
-<status status="PASS" start="2026-08-13T10:42:04.692417" elapsed="2.547541"/>
-</test>
-<status status="PASS" start="2026-08-13T10:42:04.682028" elapsed="2.560079"/>
-</suite>
-<suite id="s1-s4" name="Pagination" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\SmartCRM_Dashboard_Folder\Pagination.robot">
-<test id="s1-s4-t1" name="Verify that the user can access the Pagination" line="16">
-<kw name="Pagination">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:48.812401" level="INFO">Clicking element '//div[text()='contains']'.</msg>
+<arg>${SELECT_CONDITION_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:48.812401" elapsed="0.334692"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:49.148098" level="INFO">Clicking element '(//input[@placeholder="Enter value"])[1]'.</msg>
+<arg>${ENTER_VALUE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:49.147093" elapsed="0.337505"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:49.484598" level="INFO">Typing text 'vid' into text field '(//input[@placeholder="Enter value"])[1]'.</msg>
+<arg>${ENTER_VALUE_XPATH}</arg>
+<arg>${ENTER_VALUE_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:49.484598" elapsed="0.449968"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:49.936611" level="INFO">Clicking element '//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-dashed ant-btn-color-default ant-btn-variant-dashed ant-btn-sm ant-btn-block"]'.</msg>
+<arg>${ADD_CONDITION_BTN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:49.935634" elapsed="0.377895"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:50.313529" level="INFO">Clicking element '(//div[@class="ant-select ant-select-sm ant-select-outlined css-var-_r_0_ ant-select-css-var css-xogyor ant-select-single ant-select-show-arrow"])[4]'.</msg>
+<arg>${SECOND_TITLE_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:50.313529" elapsed="0.316429"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:50.630962" level="INFO">Clicking element '(//div[text()='Email'])[2]'.</msg>
+<arg>${SELECT_SECOND_TITLE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:50.629958" elapsed="0.304098"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:50.935137" level="INFO">Clicking element '(//input[@placeholder="Enter value"])[2]'.</msg>
+<arg>${SECOND_VALUE_ENTER_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:50.934056" elapsed="0.320984"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:51.256043" level="INFO">Typing text 'amymahtest@gmail.com' into text field '(//input[@placeholder="Enter value"])[2]'.</msg>
+<arg>${SECOND_VALUE_ENTER_XPATH}</arg>
+<arg>${ENTER_SECOND_VALUE_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:51.255040" elapsed="0.580856"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:51.835896" level="INFO">Clicking element '//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]'.</msg>
+<arg>${APPLY_FILTER_BTN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:51.835896" elapsed="0.343706"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FILTERED_ROW_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:58:52.179602" elapsed="0.307063"/>
+</kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>&lt;&lt;&lt;Applying Pagination&gt;&gt;&gt;</arg>
+<arg>&lt;&lt;&lt;Row filtered successfully!&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-13T10:42:07.256252" elapsed="0.000000"/>
+<status status="PASS" start="2026-08-18T11:58:52.488706" elapsed="0.000994"/>
+</kw>
+<status status="PASS" start="2026-08-18T11:58:46.469279" elapsed="6.020421"/>
+</kw>
+<kw name="Search Contact">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Searching the Contact&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:52.492111" elapsed="0.001985"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>0.5s</arg>
+<arg>0.1s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2026-08-13T10:42:07.257434" elapsed="0.000000"/>
+<status status="PASS" start="2026-08-18T11:58:52.494096" elapsed="0.001013"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:07.258436" level="INFO">Clicking element '//li[@title="Next Page"]'.</msg>
-<arg>${NEXT_ARROW_XPATH}</arg>
+<msg time="2026-08-18T11:58:52.497107" level="INFO">Clicking element '//input[@placeholder="Search..."]'.</msg>
+<arg>${SEARCH_BAR_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:07.257434" elapsed="1.182258"/>
+<status status="PASS" start="2026-08-18T11:58:52.496107" elapsed="0.372652"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:52.868759" level="INFO">Typing text 'amymah' into text field '//input[@placeholder="Search..."]'.</msg>
+<arg>${SEARCH_BAR_XPATH}</arg>
+<arg>${SEARCH_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:52.868759" elapsed="0.637276"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:08.440059" level="INFO">Clicking element '//li[@title="Previous Page"]'.</msg>
-<arg>${PREV_ARROW_XPATH}</arg>
+<msg time="2026-08-18T11:58:53.507855" level="INFO">Clicking element '//span[@class="anticon anticon-search"]'.</msg>
+<arg>${SEARCH_ICON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:08.440059" elapsed="2.059247"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:10.499306" level="INFO">Clicking element '//div[@title="20 / page"]'.</msg>
-<arg>${ROW_PER_PAGE_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:10.499306" elapsed="1.147622"/>
+<status status="PASS" start="2026-08-18T11:58:53.506872" elapsed="0.394919"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SELECT_ROW_PER_PAGE_XPATH}</arg>
+<arg>${SEARCHED_RECORD_XPATH}</arg>
+<arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-13T10:42:11.646928" elapsed="1.024579"/>
+<status status="PASS" start="2026-08-18T11:58:53.901791" elapsed="0.308711"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:12.672329" level="INFO">Clicking element '//div[text()='10 / page']'.</msg>
-<arg>${SELECT_ROW_PER_PAGE_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:12.672141" elapsed="1.198447"/>
+<status status="PASS" start="2026-08-18T11:58:52.491043" elapsed="1.719459"/>
 </kw>
-<status status="PASS" start="2026-08-13T10:42:07.255255" elapsed="6.615333"/>
-</kw>
-<doc>Requirement: 42 - Pagination</doc>
-<tag>critical</tag>
-<tag>smoke</tag>
-<status status="PASS" start="2026-08-13T10:42:07.254512" elapsed="6.616076"/>
-</test>
-<status status="PASS" start="2026-08-13T10:42:07.243959" elapsed="6.627568"/>
-</suite>
-<suite id="s1-s5" name="Setup" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\SmartCRM_Dashboard_Folder\Setup.robot">
-<test id="s1-s5-t1" name="Verify the the user can access the setup options" line="22">
-<kw name="Setup">
+<kw name="Add Columns">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>&lt;&lt;&lt;Accessing options from the setup&gt;&gt;&gt;</arg>
+<arg>&lt;&lt;&lt;Adding Columns from the Table Settings&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-13T10:42:13.885459" elapsed="0.000000"/>
+<status status="PASS" start="2026-08-18T11:58:54.211153" elapsed="0.001055"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>0.5s</arg>
+<arg>0.1s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2026-08-13T10:42:13.886457" elapsed="0.000000"/>
+<status status="PASS" start="2026-08-18T11:58:54.212208" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:13.887457" level="INFO">Clicking element '(//span[@class="anticon anticon-setting"])[1]'.</msg>
-<arg>${SETUP_ICON_XPATH}</arg>
+<msg time="2026-08-18T11:58:54.213200" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-/collections/contacts"]'.</msg>
+<arg>${CONTACTS_OPTION_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:13.886457" elapsed="1.164307"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SETUP_POPUP_XPATH}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-13T10:42:15.050764" elapsed="1.060525"/>
+<status status="PASS" start="2026-08-18T11:58:54.212208" elapsed="0.393349"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:16.111289" level="INFO">Clicking element '(//div[@class="ant-menu-submenu-title"])[2]'.</msg>
-<arg>${CONFG_DROPDOWN_XPATH}</arg>
+<msg time="2026-08-18T11:58:54.605557" level="INFO">Clicking element '(//span[@class="anticon anticon-setting"])[2]'.</msg>
+<arg>${TABLE_SETTINGS_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:16.111289" elapsed="1.102183"/>
+<status status="PASS" start="2026-08-18T11:58:54.605557" elapsed="0.576759"/>
+</kw>
+<kw name="Mouse Out" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:55.183321" level="INFO">Simulating Mouse Out on element '//a[text()='Reset']'.</msg>
+<arg>${RESET_ICON_XPATH}</arg>
+<doc>Simulates moving the mouse away from the element ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:55.182316" elapsed="0.916898"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-08-18T11:58:56.602286" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-08-18T11:58:56.101014" elapsed="0.501272"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:56.728233" level="INFO">${reset_button} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6f7cdccf3822bb24ac6953a64b376534", element="f.0319F6D1FAAC7D1FC581DB889F6C56A2.d.5F8E0F1D36BF2ADBE457FB0AF6598933.e.1086")&gt;</msg>
+<var>${reset_button}</var>
+<arg>${RESET_ICON_XPATH}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:56.602286" elapsed="0.125947"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:56.729279" level="INFO">Executing JavaScript:
+arguments[0].click()
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="6f7cdccf3822bb24ac6953a64b376534", element="f.0319F6D1FAAC7D1FC581DB889F6C56A2.d.5F8E0F1D36BF2ADBE457FB0AF6598933.e.1086")&gt;'</msg>
+<arg>arguments[0].click()</arg>
+<arg>ARGUMENTS</arg>
+<arg>${reset_button}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-08-18T11:58:56.728233" elapsed="0.236004"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:17.214573" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-/config/collections"]'.</msg>
-<arg>${COLLECTIONS_XPATH}</arg>
+<msg time="2026-08-18T11:58:56.964237" level="INFO">Clicking element '//span[@class="ant-checkbox ant-wave-target css-xogyor ant-checkbox-checked"]'.</msg>
+<arg>${COLUMN_DISPLAY_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:17.213472" elapsed="1.277752"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${COLLECTIONS_PAGE_XPATH}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-13T10:42:18.491793" elapsed="1.027103"/>
+<status status="PASS" start="2026-08-18T11:58:56.964237" elapsed="0.366837"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:19.518896" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-/config/option-sets"]'.</msg>
-<arg>${OPTIONSETS_XPATH}</arg>
+<msg time="2026-08-18T11:58:57.332073" level="INFO">Clicking element '//span[text()='First Name']/ancestor::div[@role='treeitem']//span[@role='checkbox']'.</msg>
+<arg>${FIRSTNAME_CHECKBOX_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:19.518896" elapsed="1.161034"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${OPTIONSETS_PAGE_XPATH}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-13T10:42:20.679930" elapsed="1.030637"/>
+<status status="PASS" start="2026-08-18T11:58:57.331074" elapsed="0.359729"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:21.710567" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-/users"]'.</msg>
-<arg>${USERS_XPATH}</arg>
+<msg time="2026-08-18T11:58:57.690803" level="INFO">Clicking element '//span[text()='Description']/ancestor::div[@role='treeitem']//span[@role='checkbox']'.</msg>
+<arg>${DESCRIPTION_CHECKBOX_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:21.710567" elapsed="1.123934"/>
+<status status="PASS" start="2026-08-18T11:58:57.690803" elapsed="0.401426"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${USERS_PAGE_XPATH}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-13T10:42:22.835039" elapsed="1.028895"/>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:58.242104" level="INFO">${container1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6f7cdccf3822bb24ac6953a64b376534", element="f.0319F6D1FAAC7D1FC581DB889F6C56A2.d.5F8E0F1D36BF2ADBE457FB0AF6598933.e.1145")&gt;</msg>
+<var>${container1}</var>
+<arg>//div[contains(@class,'ant-tree-list-holder')]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:58.092229" elapsed="0.149875"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:58.244169" level="INFO">Executing JavaScript:
+arguments[0].scrollTop = arguments[0].scrollHeight;
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="6f7cdccf3822bb24ac6953a64b376534", element="f.0319F6D1FAAC7D1FC581DB889F6C56A2.d.5F8E0F1D36BF2ADBE457FB0AF6598933.e.1145")&gt;'</msg>
+<arg>arguments[0].scrollTop = arguments[0].scrollHeight;</arg>
+<arg>ARGUMENTS</arg>
+<arg>${container1}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-08-18T11:58:58.243184" elapsed="0.124603"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:23.865110" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-/roles"]'.</msg>
-<arg>${ROLES_XPATH}</arg>
+<msg time="2026-08-18T11:58:58.367787" level="INFO">Clicking element '//span[text()='Birthdate']/ancestor::div[@role='treeitem']//span[@role='checkbox']'.</msg>
+<arg>${BIRTHDATE_CHECKBOX_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:23.863934" elapsed="1.180558"/>
+<status status="PASS" start="2026-08-18T11:58:58.367787" elapsed="0.509255"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ROLES_PAGE_XPATH}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-13T10:42:25.044492" elapsed="1.028741"/>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:58.995621" level="INFO">${container2} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6f7cdccf3822bb24ac6953a64b376534", element="f.0319F6D1FAAC7D1FC581DB889F6C56A2.d.5F8E0F1D36BF2ADBE457FB0AF6598933.e.1145")&gt;</msg>
+<var>${container2}</var>
+<arg>//div[contains(@class,'ant-tree-list-holder')]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:58.877042" elapsed="0.118579"/>
 </kw>
-<status status="PASS" start="2026-08-13T10:42:13.884456" elapsed="12.188777"/>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:58.996479" level="INFO">Executing JavaScript:
+arguments[0].scrollTop = arguments[0].scrollHeight;
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="6f7cdccf3822bb24ac6953a64b376534", element="f.0319F6D1FAAC7D1FC581DB889F6C56A2.d.5F8E0F1D36BF2ADBE457FB0AF6598933.e.1145")&gt;'</msg>
+<arg>arguments[0].scrollTop = arguments[0].scrollHeight;</arg>
+<arg>ARGUMENTS</arg>
+<arg>${container2}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-08-18T11:58:58.995621" elapsed="0.113971"/>
 </kw>
-<doc>Requirement: 42 - Access Setup options</doc>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:59.109592" level="INFO">Clicking element '//span[text()='Actions']/ancestor::div[@role='treeitem']//span[@role='checkbox']'.</msg>
+<arg>${ACTIONS_CHECKBOX_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:59.109592" elapsed="0.365940"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:59.475532" level="INFO">Clicking element '//main[@class="ant-layout-content css-xogyor"]'.</msg>
+<arg>${MAIN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:59.475532" elapsed="0.333749"/>
+</kw>
+<status status="PASS" start="2026-08-18T11:58:54.211153" elapsed="5.598128"/>
+</kw>
+<doc>Requirement: 42 - Filter Contact</doc>
 <tag>critical</tag>
+<tag>login</tag>
 <tag>smoke</tag>
-<status status="PASS" start="2026-08-13T10:42:13.884456" elapsed="12.188777"/>
+<status status="PASS" start="2026-08-18T11:58:46.468287" elapsed="13.342076"/>
 </test>
-<status status="PASS" start="2026-08-13T10:42:13.872948" elapsed="12.202144"/>
+<status status="PASS" start="2026-08-18T11:58:46.453280" elapsed="13.359028"/>
 </suite>
-<suite id="s1-s6" name="Logout" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\SmartCRM_Dashboard_Folder\Logout.robot">
-<test id="s1-s6-t1" name="Verify that the user can Logout of the application" line="14">
-<kw name="Logout">
+<suite id="s1-s7" name="Delete Contact" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Contacts_Folder\Delete_Contact.robot">
+<test id="s1-s7-t1" name="Verfiy that the user can delete the Contact" line="17">
+<kw name="Delete Contact">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Deleting Contact Record&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-18T11:58:59.860299" elapsed="0.000999"/>
+</kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>0.5s</arg>
+<arg>0.1s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2026-08-13T10:42:26.087194" elapsed="0.000000"/>
+<status status="PASS" start="2026-08-18T11:58:59.861298" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:58:59.862299" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]'.</msg>
+<arg>${MORE_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:58:59.861298" elapsed="0.307082"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:59:00.169421" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-delete"]'.</msg>
+<arg>${DELETE_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:59:00.168380" elapsed="0.300862"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DELETE_POPUP_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:59:00.469242" elapsed="0.227103"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-18T11:59:00.697350" level="INFO">Clicking element '//button[@class="ant-btn css-xogyor css-var-root ant-btn-default ant-btn-dangerous ant-btn-color-dangerous ant-btn-variant-outlined"]'.</msg>
+<arg>${DELETE_BTN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-08-18T11:59:00.696345" elapsed="0.387973"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DELETED_SUCCESS_MSG_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-08-18T11:59:01.084318" elapsed="0.400248"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>&lt;&lt;&lt;Logging out of the application&gt;&gt;&gt;</arg>
+<arg>&lt;&lt;&lt;Contact record deleted successfully!&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-13T10:42:26.087194" elapsed="0.001074"/>
+<status status="PASS" start="2026-08-18T11:59:01.484566" elapsed="0.000992"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:26.088777" level="INFO">Clicking element '//span[@class="ant-avatar ant-avatar-sm ant-avatar-circle ant-avatar-icon css-var-_r_0_ ant-avatar-css-var css-xogyor"]'.</msg>
-<arg>${PROFILE_ICON_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:26.088268" elapsed="1.118496"/>
+<status status="PASS" start="2026-08-18T11:58:59.860299" elapsed="1.625259"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-13T10:42:27.207725" level="INFO">Clicking element '//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-dangerous ant-btn-color-dangerous ant-btn-variant-solid ant-btn-block"]'.</msg>
-<arg>${LOGOUT_BTN_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-13T10:42:27.206764" elapsed="1.130190"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${LOGIN_PAGE_XPATH}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-13T10:42:28.337653" elapsed="1.030163"/>
-</kw>
-<status status="PASS" start="2026-08-13T10:42:26.086733" elapsed="3.281083"/>
-</kw>
-<doc>Requirement: 42 - Logout</doc>
+<doc>Requirement: 42 - Delete Contact</doc>
 <tag>critical</tag>
+<tag>login</tag>
 <tag>smoke</tag>
-<status status="PASS" start="2026-08-13T10:42:26.085090" elapsed="3.282726"/>
+<status status="PASS" start="2026-08-18T11:58:59.859308" elapsed="1.626674"/>
 </test>
-<status status="PASS" start="2026-08-13T10:42:26.076921" elapsed="3.293514"/>
+<status status="PASS" start="2026-08-18T11:58:59.819324" elapsed="1.668189"/>
 </suite>
-<status status="PASS" start="2026-08-13T10:41:42.879362" elapsed="46.492595"/>
+<status status="PASS" start="2026-08-18T11:58:13.339032" elapsed="48.150480"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="0" skip="0">All Tests</stat>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="6" fail="0" skip="0">critical</stat>
-<stat pass="1" fail="0" skip="0">login</stat>
-<stat pass="6" fail="0" skip="0">smoke</stat>
+<stat pass="5" fail="0" skip="0">critical</stat>
+<stat pass="4" fail="0" skip="0">login</stat>
+<stat pass="7" fail="0" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="Login &amp; Mode &amp; Full Screen &amp; Pagination &amp; Setup &amp; Logout" id="s1" pass="6" fail="0" skip="0">Login &amp; Mode &amp; Full Screen &amp; Pagination &amp; Setup &amp; Logout</stat>
-<stat name="Login" id="s1-s1" pass="1" fail="0" skip="0">Login &amp; Mode &amp; Full Screen &amp; Pagination &amp; Setup &amp; Logout.Login</stat>
-<stat name="Mode" id="s1-s2" pass="1" fail="0" skip="0">Login &amp; Mode &amp; Full Screen &amp; Pagination &amp; Setup &amp; Logout.Mode</stat>
-<stat name="Full Screen" id="s1-s3" pass="1" fail="0" skip="0">Login &amp; Mode &amp; Full Screen &amp; Pagination &amp; Setup &amp; Logout.Full Screen</stat>
-<stat name="Pagination" id="s1-s4" pass="1" fail="0" skip="0">Login &amp; Mode &amp; Full Screen &amp; Pagination &amp; Setup &amp; Logout.Pagination</stat>
-<stat name="Setup" id="s1-s5" pass="1" fail="0" skip="0">Login &amp; Mode &amp; Full Screen &amp; Pagination &amp; Setup &amp; Logout.Setup</stat>
-<stat name="Logout" id="s1-s6" pass="1" fail="0" skip="0">Login &amp; Mode &amp; Full Screen &amp; Pagination &amp; Setup &amp; Logout.Logout</stat>
+<stat name="Login &amp; Add Contact &amp; View Contact &amp; Edit Contact &amp; Clone Contact &amp; Filter Contact &amp; Delete Contact" id="s1" pass="7" fail="0" skip="0">Login &amp; Add Contact &amp; View Contact &amp; Edit Contact &amp; Clone Contact &amp; Filter Contact &amp; Delete Contact</stat>
+<stat name="Login" id="s1-s1" pass="1" fail="0" skip="0">Login &amp; Add Contact &amp; View Contact &amp; Edit Contact &amp; Clone Contact &amp; Filter Contact &amp; Delete Contact.Login</stat>
+<stat name="Add Contact" id="s1-s2" pass="1" fail="0" skip="0">Login &amp; Add Contact &amp; View Contact &amp; Edit Contact &amp; Clone Contact &amp; Filter Contact &amp; Delete Contact.Add Contact</stat>
+<stat name="View Contact" id="s1-s3" pass="1" fail="0" skip="0">Login &amp; Add Contact &amp; View Contact &amp; Edit Contact &amp; Clone Contact &amp; Filter Contact &amp; Delete Contact.View Contact</stat>
+<stat name="Edit Contact" id="s1-s4" pass="1" fail="0" skip="0">Login &amp; Add Contact &amp; View Contact &amp; Edit Contact &amp; Clone Contact &amp; Filter Contact &amp; Delete Contact.Edit Contact</stat>
+<stat name="Clone Contact" id="s1-s5" pass="1" fail="0" skip="0">Login &amp; Add Contact &amp; View Contact &amp; Edit Contact &amp; Clone Contact &amp; Filter Contact &amp; Delete Contact.Clone Contact</stat>
+<stat name="Filter Contact" id="s1-s6" pass="1" fail="0" skip="0">Login &amp; Add Contact &amp; View Contact &amp; Edit Contact &amp; Clone Contact &amp; Filter Contact &amp; Delete Contact.Filter Contact</stat>
+<stat name="Delete Contact" id="s1-s7" pass="1" fail="0" skip="0">Login &amp; Add Contact &amp; View Contact &amp; Edit Contact &amp; Clone Contact &amp; Filter Contact &amp; Delete Contact.Delete Contact</stat>
 </suite>
 </statistics>
 <errors>

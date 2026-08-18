@@ -5,6 +5,7 @@ Resource        Contact.resource
 *** Keywords ***
 Delete Contact
     Log To Console    <<<Deleting Contact Record>>>
+    Set Selenium Speed    0.1s
     Click Element    ${MORE_ICON_XPATH}
     Click Element    ${DELETE_ICON_XPATH}
     Wait Until Element Is Visible    ${DELETE_POPUP_XPATH}      5s

@@ -11,7 +11,6 @@ Edit Lead
     [Documentation]    Edit Lead
 
     Log To Console   <<<Editing Lead from the Actions column>>>
-    Set Selenium Speed    0.5s
     Click Element    ${LEADS_XPATH}
     Click Element    ${MORE_ICON_XPATH}
     Click Element    ${EDIT_XPATH}
@@ -42,6 +41,7 @@ Edit Lead
     
     Log To Console    <<<Editing Company Information>>>
     Click Element    ${INDUSTRY_XPATH}
+    Wait Until Element Is Visible    ${SELECT_INDUSTRY_EDITED_XPATH}        5s
     Click Element    ${SELECT_INDUSTRY_EDITED_XPATH}
 
     Click Element    ${EMPLOYEES_XPATH}
@@ -59,6 +59,7 @@ Edit Lead
 
     Log To Console    <<<Editing Lead Details>>>
     Click Element    ${RATING_XPATH}
+    Wait Until Element Is Visible    ${SELECT_RATING_EDITED_XPATH}      5s
     Click Element    ${SELECT_RATING_EDITED_XPATH}
 
     Log To Console    <<<Editing Address & Prefrences>>>
