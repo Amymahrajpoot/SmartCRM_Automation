@@ -61,11 +61,24 @@ Pagination
     Wait Until Element Is Visible    ${SELECT_ROW_PER_PAGE_XPATH}
     Click Element    ${SELECT_ROW_PER_PAGE_XPATH}
 
+
 *** Test Cases ***
-Verfiy that the user can Filter the Lead
-    [Documentation]    Requirement: 42 - Filter lead
-    [Tags]    smoke    critical    login
+Verify that the user can apply pagination on the leads table
+    [Documentation]    Requirement: 42 - Pagination
+    [Tags]    smoke    critical
     Pagination
+
+Verify that the user can filter the lead
+    [Documentation]    Requirement: 42 - Filter lead
+    [Tags]    smoke    critical
     Filter Lead
+
+Verify that the user can search the lead
+    [Documentation]    Requirement: 42 - Search lead
+    [Tags]    smoke    critical
     Search Lead
+
+Verify that the user can add columns from table settings
+    [Documentation]    Requirement: 42 - Add columns
+    [Tags]    smoke    critical
     Add Columns

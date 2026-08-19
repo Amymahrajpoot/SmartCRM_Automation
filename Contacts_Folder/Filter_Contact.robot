@@ -65,10 +65,22 @@ Pagination
     Click Element    ${SELECT_ROW_PER_PAGE_XPATH}
 
 *** Test Cases ***
-Verfiy that the user can Filter the Contact
-    [Documentation]    Requirement: 42 - Filter Contact
-    [Tags]    smoke    critical    login
+Verify that the user can apply pagination on the Contacts table
+    [Documentation]    Requirement: 42 - Pagination
+    [Tags]    smoke    critical
     Pagination
+
+Verify that the user can filter the Contact
+    [Documentation]    Requirement: 42 - Filter Contact
+    [Tags]    smoke    critical
     Filter Contact
+
+Verify that the user can search the Contact
+    [Documentation]    Requirement: 42 - Search Contact
+    [Tags]    smoke    critical
     Search Contact
+
+Verify that the user can add columns from table settings
+    [Documentation]    Requirement: 42 - Add columns
+    [Tags]    smoke    critical
     Add Columns
