@@ -67,6 +67,7 @@ Create Lead
         Log To Console   <<<Adding Company Information>>>
         Click Element    ${PHONE_CODE_XPATH}
         Input Text    ${PHONE_CODE_XPATH}      ${PHONE_CODE_TEXT}
+        Wait Until Element Is Visible     ${SELECT_PHONE_CODE_XPATH}        5s
         Click Element    ${SELECT_PHONE_CODE_XPATH}
         Click Element    ${PHONE_NUMBER_XPATH}
         Input Text    ${PHONE_NUMBER_XPATH}      ${PHONE_NUMBER_TEXT}
@@ -79,6 +80,7 @@ Create Lead
         Click Element    ${SELECT_INDUSTRY_XPATH}
         Click Element    ${EMPLOYEES_XPATH}
 
+        Wait Until Element Is Visible    ${EMPLOYEES_COUNTER_XPATH}     5s
         FOR    ${i}    IN RANGE    5
             Click Element    ${EMPLOYEES_COUNTER_XPATH}
         END

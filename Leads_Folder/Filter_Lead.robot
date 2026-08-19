@@ -5,6 +5,7 @@ Resource        Lead.resource
 *** Keywords ***
 Filter Lead
     Log To Console    <<<Filter Lead from the leads list>>>
+    Wait Until Element Is Visible    ${FILTERS_BUTTON_XPATH}        5s
     Click Element    ${FILTERS_BUTTON_XPATH} 
     Wait Until Element Is Visible    ${ADVANCED_FILTERS_POPUP_XPATH}    5s
     Click Element    ${ADD_OR_DROPDOWN_XPATH} 
@@ -41,6 +42,7 @@ Add Columns
     Sleep    0.5s
     ${reset_button}=    Get WebElement    ${RESET_ICON_XPATH}
     Execute Javascript    arguments[0].click()    ARGUMENTS    ${reset_button}
+    Click Element    ${COLUMN_DISPLAY_XPATH}
     Click Element    ${COLUMN_DISPLAY_XPATH}
     Click Element    ${NAME_CHECKBOX_XPATH}
     Click Element    ${MOBILE_CHECKBOX_XPATH}

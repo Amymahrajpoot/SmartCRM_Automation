@@ -12,6 +12,8 @@ Convert Lead
     Click Element    ${COONVERT_BUTTON_XPATH}
     Wait Until Element Is Visible    ${CONVERT_SUCCESS_MESSAGE_XPATH}    5s
     Log To Console    <<<Lead record converted successfully!>>>
+    Wait Until Element Is Visible     ${BACK_ICON_XPATH}   5s
+    Click Element    ${LEADS_XPATH}
 
 *** Test Cases ***
 Verfiy that the user can Convert the Lead

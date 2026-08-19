@@ -45,6 +45,7 @@ Add Columns
     ${reset_button}=    Get WebElement    ${RESET_ICON_XPATH}
     Execute Javascript    arguments[0].click()    ARGUMENTS    ${reset_button}
     Click Element    ${COLUMN_DISPLAY_XPATH}
+    Click Element    ${COLUMN_DISPLAY_XPATH}
     Click Element    ${FIRSTNAME_CHECKBOX_XPATH}
     Click Element    ${DESCRIPTION_CHECKBOX_XPATH}
     ${container1}=    Get WebElement    //div[contains(@class,'ant-tree-list-holder')]
@@ -58,7 +59,10 @@ Add Columns
 Pagination
     Log To Console    <<<Applying Pagination>>>
     Set Selenium Speed    0.1s
+    Click Element    ${CONTACTS_OPTION_XPATH}
+    Wait Until Element Is Visible    ${NEXT_ARROW_XPATH}    5s
     Click Element    ${NEXT_ARROW_XPATH}
+    Wait Until Element Is Visible    ${PREV_ARROW_XPATH}    5s
     Click Element    ${PREV_ARROW_XPATH}
     Click Element    ${ROW_PER_PAGE_XPATH}
     Wait Until Element Is Visible    ${SELECT_ROW_PER_PAGE_XPATH}

@@ -26,7 +26,7 @@ ${CONTACTOWNER_DROPDOWN_XPATH}              //input[@id="OwnerId"]
 ${SELECT_CONTACTOWNER_DROPDOWN_XPATH}       (//div[@title="Test Bss"])[2]
 ${MAILINGADDRESS_FIELD_XPATH}               //input[@id="MailingAddress"]
 ${OTHERADDRESS_FIELD_XPATH}                 //input[@id="otherAddress"]
-${DESCRIPTION_FIELD_XPATH}                  //input[@id="Description"]
+${DESCRIPTION_FIELD_XPATH}                  //textarea[@id="Description"]
 ${BIRTHDAY_CALENDAR_XPATH}                  //input[@id="Birthdate"]
 ${SELECT_MONTH_XPATH}                       //div[text()='Sep']
 ${SELECT_DATE_XPATH}                        //td[@title="2001-09-07"]
@@ -57,7 +57,7 @@ ${CONTACT_EMAIL_VALIDATION_MSG_XPATH}               //div[text()='Please enter E
 ${MORE_ICON_XPATH}          (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]
 ${VIEW_ICON_XPATH}          //li[@data-menu-id="rc-menu-uuid-view"]
 ${VIEW_CONTACT_PAGE_XPATH}      //h2[text()='Contacts']
-${BACK_ICON_XPATH}          (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only"])[5]
+${BACK_ICON_XPATH}          (//button[@type="button"])[4]
 
 #Edit Contact
 ${EDIT_ICON_XPATH}              //li[@data-menu-id="rc-menu-uuid-edit"]
@@ -113,12 +113,12 @@ ${FIRSTNAME_CHECKBOX_XPATH}         //span[text()='First Name']/ancestor::div[@r
 ${BIRTHDATE_CHECKBOX_XPATH}         //span[text()='Birthdate']/ancestor::div[@role='treeitem']//span[@role='checkbox']
 ${DESCRIPTION_CHECKBOX_XPATH}       //span[text()='Description']/ancestor::div[@role='treeitem']//span[@role='checkbox']
 ${RESET_ICON_XPATH}                 //a[text()='Reset']
-${COLUMN_DISPLAY_XPATH}             //span[@class="ant-checkbox ant-wave-target css-xogyor ant-checkbox-checked"]
+${COLUMN_DISPLAY_XPATH}             //span[@class="ant-checkbox-label"]
 ${ACTIONS_CHECKBOX_XPATH}           //span[text()='Actions']/ancestor::div[@role='treeitem']//span[@role='checkbox']
 ${MAIN_XPATH}                       //main[@class="ant-layout-content css-xogyor"]
 
 #Pagination
-${NEXT_ARROW_XPATH}         //li[@title="Next Page"]
-${PREV_ARROW_XPATH}         //li[@title="Previous Page"]
+${NEXT_ARROW_XPATH}         (//button[@class="ant-pagination-item-link"])[2]
+${PREV_ARROW_XPATH}         (//button[@class="ant-pagination-item-link"])[1]
 ${ROW_PER_PAGE_XPATH}       //div[@title="20 / page"]
 ${SELECT_ROW_PER_PAGE_XPATH}    //div[text()='10 / page']

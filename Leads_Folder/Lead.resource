@@ -46,10 +46,10 @@ ${LEAD_STATUS_XPATH}             (//div[@class="ant-form-item-control-input"])[1
 ${SELECT_LEAD_STATUS_XPATH}     //div[@title="Open"]
 ${RATING_XPATH}                 (//div[@class="ant-form-item-control-input"])[19]
 ${SELECT_RATING_XPATH}           //div[@title="Warm"]
-${DESCRIPTION_XPATH}             //input[@placeholder="Enter Description"]
+${DESCRIPTION_XPATH}             //textarea[@id="Description"]
 
-${ADDRESS_XPATH}        //input[@id="Address"]
-${STREET_XPATH}        //input[@id="Street"]
+${ADDRESS_XPATH}         //textarea[@id="Address"]
+${STREET_XPATH}          //textarea[@id="Street"]
 ${CITY_XPATH}           //input[@id="City"]
 ${STATE_XPATH}           //input[@id="State"]
 ${POSTALCODE_XPATH}      //input[@id="PostalCode"]
@@ -67,7 +67,7 @@ ${SELECT_LEAD_OWNER_XPATH}                //div[@title="Admin User"]
 ${LEAD_PARTNER_CONTACT_XPATH}             //input[@id="LeadPartnerContact"]
 ${SELECT_LEAD_PARTNER_CONTACT_XPATH}      //div[@title="Conrad"]
 
-${NOTES_XPATH}      //input[@id="Notes"]
+${NOTES_XPATH}      //div[@class="ql-editor ql-blank"]
 
 ${CREATE_RECORD_BUTTON_XPATH}       //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]
 ${Add_SUCCESS_MESSAGE_XPATH}            //span[text()='Record created successfully!']
@@ -76,7 +76,7 @@ ${Add_SUCCESS_MESSAGE_XPATH}            //span[text()='Record created successful
 ${MORE_ICON_XPATH}        (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]
 ${VIEW_XPATH}             //li[@data-menu-id="rc-menu-uuid-view"]
 ${LEADS_PAGE_XPATH}        //h2[text()='Leads']
-${BACK_IOCN_XPATH}          (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only"])[5]
+${BACK_IOCN_XPATH}         (//button[@type="button"])[4]
 
 #Edit Lead
 ${MORE_ICON_XPATH}          (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]
@@ -135,7 +135,7 @@ ${CLONE_OPTION_XPATH}       //li[@data-menu-id="rc-menu-uuid-clone"]
 ${CLONE_POPUP_XPATH}        //div[text()='Clone Record - Leads']
 ${CLONE_BUTTON_XPATH}       //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]
 ${SUCCESS_MESSAGE_XPATH}    //span[text()='Record created successfully!']
-${BACK_ICON_XPATH}          (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only"])[5]
+${BACK_ICON_XPATH}          (//button[@type="button"])[4]
 
 #Convert Lead
 ${CONVERT_LEAD_XPATH}       //li[@data-menu-id="rc-menu-uuid-convert"]
@@ -176,7 +176,7 @@ ${DELETE_SUCCESS_MSG_XPATH}     //span[text()='Leads deleted successfully!']
 
 #Table Settings
 ${RESET_ICON_XPATH}         //a[text()='Reset']
-${COLUMN_DISPLAY_XPATH}     //span[@class="ant-checkbox ant-wave-target css-xogyor ant-checkbox-checked"]
+${COLUMN_DISPLAY_XPATH}     //span[@class="ant-checkbox-label"]
 ${TABLE_SETTINGS_XPATH}     (//span[@aria-label="setting"])[2]
 ${NAME_CHECKBOX_XPATH}      //span[text()='Name']/ancestor::div[@role='treeitem']//span[@role='checkbox']
 ${MOBILE_CHECKBOX_XPATH}    //span[text()='Mobile']/ancestor::div[@role='treeitem']//span[@role='checkbox']

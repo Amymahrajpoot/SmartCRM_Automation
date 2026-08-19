@@ -11,6 +11,7 @@ Clone Contact
     Click Element    ${CLONE_BTN_XPATH}
     Wait Until Element Is Visible    ${CLONE_SUCCESS_MSG_XPATH}    5s
     Log To Console    <<<Contact cloned successfully!>>>
+    Wait Until Element Is Visible    ${BACK_ICON_XPATH}         5s
     Click Element    ${BACK_ICON_XPATH}
 
 *** Test Cases ***
