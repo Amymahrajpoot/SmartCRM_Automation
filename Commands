@@ -1,8 +1,8 @@
 #Lead
-robot Login_Folder/Login.robot Leads_Folder/Add_Lead.robot Leads_Folder/View_Lead.robot Leads_Folder/Edit_Lead.robot Leads_Folder/Clone_Lead.robot Leads_Folder/Convert_Lead.robot Leads_Folder/Filter_Lead.robot  Leads_Folder/Delete_Lead.robot
+robot Login_Folder/Login.robot Leads_Folder/Add_Lead.robot Leads_Folder/View_Lead.robot Leads_Folder/Edit_Lead.robot Leads_Folder/Clone_Lead.robot Leads_Folder/Convert_Lead.robot Leads_Folder/Table_Controls_Lead.robot  Leads_Folder/Delete_Lead.robot
 
 #Contacts
-robot Login_Folder/Login.robot  Contacts_Folder/Add_Contact.robot Contacts_Folder/View_Contact.robot Contacts_Folder/Edit_Contact.robot Contacts_Folder/Clone_Contact.robot Contacts_Folder/Filter_Contact.robot Contacts_Folder/Delete_Contact.robot
+robot Login_Folder/Login.robot  Contacts_Folder/Add_Contact.robot Contacts_Folder/View_Contact.robot Contacts_Folder/Edit_Contact.robot Contacts_Folder/Clone_Contact.robot Contacts_Folder/Table_Controls_Contact.robot Contacts_Folder/Delete_Contact.robot
 
 #Dashboard
 robot Login_Folder/Login.robot SmartCRM_Dashboard_Folder/Mode.robot SmartCRM_Dashboard_Folder/Setup.robot SmartCRM_Dashboard_Folder/Full_Screen.robot SmartCRM_Dashboard_Folder/Logout.robot

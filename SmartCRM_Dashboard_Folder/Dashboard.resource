@@ -2,10 +2,6 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-#Full Screen
-${FULL_SCREEN_XPATH}        //span[@class="anticon anticon-fullscreen"]
-${EXIST_FULL_SCREEN_XPATH}      //span[@class="anticon anticon-fullscreen-exit"]
-
 #Mode
 ${DARH_MODE_XPATH}         (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only"])[2]
 ${LIGHT_MODE_XPATH}         (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only"])[2]

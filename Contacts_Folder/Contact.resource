@@ -122,3 +122,7 @@ ${NEXT_ARROW_XPATH}         (//button[@class="ant-pagination-item-link"])[2]
 ${PREV_ARROW_XPATH}         (//button[@class="ant-pagination-item-link"])[1]
 ${ROW_PER_PAGE_XPATH}       //div[@title="20 / page"]
 ${SELECT_ROW_PER_PAGE_XPATH}    //div[text()='10 / page']
+
+#Full Screen
+${FULL_SCREEN_XPATH}        //span[@class="anticon anticon-fullscreen"]
+${EXIST_FULL_SCREEN_XPATH}      //span[@class="anticon anticon-fullscreen-exit"]

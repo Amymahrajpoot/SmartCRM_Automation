@@ -8,8 +8,11 @@ Test Template      Create Task
 *** Keywords ***
 Check Task Exists
     [Arguments]    ${Subject_name}
+    Wait Until Element Is Not Visible    ${SUCCESS_ELEMENT_XPATH}    10s
     Click Element    ${TASK_OPTION_XPATH}
-    Wait Until Element Is Visible    ${SEARCH_BAR_XPATH}    timeout=10s
+    Click Element    ${TABLE_SETTINGS_XPATH}
+    Click Element    ${SUBJECT_CHECKBOX_XPATH}
+    Wait Until Element Is Visible    ${SEARCH_BAR_XPATH}      10s
     Input Text    ${SEARCH_BAR_XPATH}    ${Subject_name}
     Click Element    ${SEARCH_ICON_XPATH}
     Sleep    1s
@@ -56,27 +59,46 @@ Create Task
         Click Element    ${SELECT_RELATED_TO_XPATH}
         Click Element    ${COMMENTS_XPATH}
         Input Text    ${COMMENTS_XPATH}     ${COMMENTS_FIELD_TEXT}
+
+        Log To Console   <<<Adding Schedule>>>
         Click Element    ${DUE_DATE_CALENDAR_XPATH}
         Click Element    ${SELECT_DUE_DATE_XPATH}
-        Click Element    ${COMPLETED_DATE_TIME_CALENDAR_XPATH}
-        Click Element    ${SELECT_COMPLETED_DATE_XPATH}
+        Sleep    0.5s
+
+        ${completed_date_field}=    Get WebElement    ${COMPLETED_DATE_TIME_CALENDAR_XPATH}
+        Execute Javascript    arguments[0].click()    ARGUMENTS    ${completed_date_field}
+        Sleep    1s
+
+        ${SELECT_COMPLETED_DATE_SCOPED_XPATH}=    Set Variable
+        ...    //div[contains(@class,'ant-picker-dropdown') and not(contains(@class,'ant-picker-dropdown-hidden'))]//td[@title='2026-08-25']
+
+        Wait Until Element Is Visible    ${SELECT_COMPLETED_DATE_SCOPED_XPATH}    timeout=10s
+        ${date_cell}=    Get WebElement    ${SELECT_COMPLETED_DATE_SCOPED_XPATH}
+        Execute Javascript    arguments[0].click()    ARGUMENTS    ${date_cell}
+
         Click Element    ${SELECT_COMPLETED_HOUR_XPATH}
         Scroll Element Into View    ${SELECT_COMPLETED_MINUTES_XPATH}
         Click Element    ${SELECT_COMPLETED_MINUTES_XPATH}
         Click Element    ${SELECT_COMPLETED_SECONDS_XPATH}
         Click Element    ${OK_BTN_XPATH}
         Click Element    ${REMINDER_SET_CHECKBOX_XPATH}
+
+        Log To Console   <<<Adding Contact Information>>>
         Click Element    ${EMAIL_XPATH}
-        Input Text    ${EMAIL_XPATH}    ${EMAIL_FIELD_XPATH}
+        Input Text    ${EMAIL_XPATH}    ${EMAIL_TEXT}
         Click Element    ${MOBILE_CODE_XPATH}
         Input Text    ${MOBILE_CODE_XPATH}     ${MOBILE_CODE_TEXT}
         Click Element    ${SELECT_MOBILE_CODE_XPATH}
         Click Element    ${MOBILE_FIELD_XPATH}
         Input Text    ${MOBILE_FIELD_XPATH}    ${MOBILE_NUMBER_TEXT}
+
+        Log To Console   <<<Adding Additional Information>>>
         Click Element    ${STATUS_DROPDOWN_XPATH}
         Click Element    ${SELECT_STATUS_DROPDOWN_XPATH}
         Click Element    ${PRIORITY_DROPDOWN_XPATH}
         Click Element    ${SELECT_PRIORITY_XPATH}
+
+        Log To Console   <<<Adding Recurrence>>>
         Click Element    ${CREATE_RECURR_SERIES_OF_TASKS_XPATH}
         Click Element    ${RECURRENCE_INTERVAL_XPATH}
 
