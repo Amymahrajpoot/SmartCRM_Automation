@@ -38,7 +38,7 @@ Add Columns
     #Landing on the Lead Tab
 #   Click Element    ${LEADS_XPATH}
     Click Element    ${TABLE_SETTINGS_XPATH}
-    Mouse Out    ${RESET_ICON_XPATH}
+    Mouse Out        ${RESET_ICON_XPATH}
     Sleep    0.5s
     ${reset_button}=    Get WebElement    ${RESET_ICON_XPATH}
     Execute Javascript    arguments[0].click()    ARGUMENTS    ${reset_button}

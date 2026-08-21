@@ -49,16 +49,52 @@ ${CREATE_SUCCESS_MSG_XPATH}                         //span[text()='Record create
 #Subject validation
 ${VALIDATION_ERROR_MSG_XPATH}                       //div[text()='Please enter Subject']
 
-#View Lead
+#View Task
 ${MORE_ICON_XPATH}        (//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]
 ${VIEW_XPATH}             //li[@data-menu-id="rc-menu-uuid-view"]
 ${TASKS_PAGE_XPATH}        //h2[text()='Tasks']
-${BACK_IOCN_XPATH}         (//button[@type="button"])[4]
+${BACK_ICON_XPATH}         (//button[@type="button"])[4]
+
+#Edit Task
+${EDIT_XPATH}                                  //li[@data-menu-id="rc-menu-uuid-edit"]
+${EDIT_TASK_POPUP_XPATH}                       //div[text()='Edit Record - Tasks']
+${SELECTED_TASK_SUBTYPE_DROPDOWN_XPATH}        //div[text()='Email']/ancestor::div[contains(@class,'ant-select-single')]
+${SELECT_EDITED_TASK_SUBTYPE_XPATH}           //div[text()='Call']
+${EDITED_COMMENT_TEXT}                       creating task with the test subject
+${SELECTED_PRIORITY_DROPDOWN_XPATH}          //div[text()='Medium']/ancestor::div[contains(@class,'ant-select-single')]
+${SELECT_EDITED-PRIORITY_XPATH}              //div[@title="High"]
+${UPDATE_RECORD_BUTTON_XPATH}                //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]
+${UPDATE_SUCCESS_MESSAGE_XPATH}              //span[text()='Tasks updated successfully!']
+
+#Clone Lead
+${CLONE_OPTION_XPATH}       //li[@data-menu-id="rc-menu-uuid-clone"]
+${CLONE_POPUP_XPATH}        //div[text()='Clone Record - Tasks']
+${CLONE_BUTTON_XPATH}       //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]
+${SUCCESS_MESSAGE_XPATH}    //span[text()='Record created successfully!']
 
 #Search
 ${SEARCH_BAR_XPATH}         //input[@placeholder="Search..."]
 ${SEARCH_ICON_XPATH}        //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-default ant-btn-color-default ant-btn-variant-outlined ant-btn-icon-only ant-btn-compact-item ant-btn-compact-last-item ant-input-search-btn"]
+${SEARCH_TEXT}              new subject
+${SEARCHED_RECORD_XPATH}    //div[@class="ant-table-body"]
 
 #Table Settings
 ${TABLE_SETTINGS_XPATH}     (//span[@aria-label="setting"])[2]
 ${SUBJECT_CHECKBOX_XPATH}      //span[text()='Subject']/ancestor::div[@role='treeitem']//span[@role='checkbox']
+
+#Filter
+${FILTERS_BUTTON_XPATH}              //span[@class="ant-badge css-xogyor css-var-_r_0_"]
+${ADVANCED_FILTERS_POPUP_XPATH}      //div[text()='Advanced Filters']
+${ADD_CONDITION_BUTTON_XPATH}        //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-dashed ant-btn-color-default ant-btn-variant-dashed ant-btn-sm ant-btn-block"]
+${FIELD_DROPDOWN_XPATH}              (//div[text()='Assigned Person'])[1]
+${SELECT_FIELD_XPATH}                //div[text()='Subject']
+${CONDITION_DROPDOWN_XPATH}          (//div[text()='is equal to'])[1]
+${SELECT_CONDITION_XPATH}            //div[text()='is not equal to']
+${FIRST_FILTER_INPUT_XPATH}          //input[@placeholder="Enter value"]
+${FIRST_FILTER_INPUT_TEXT}           test subject
+${SELECT_ASSIGNED_PERSON_DROPDOWN_XPATH}           //div[text()='Select Assigned Person']/ancestor::div[contains(@class,'ant-select-single')]
+${SELECT_ASSIGNED_PERSON_XPATH}                    //div[text()='Admin User']
+${APPLY_BUTTON_XPATH}                              //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]
+${FILTERED_ROW_XPATH}                              //div[@class="ant-table-body"]
+
+

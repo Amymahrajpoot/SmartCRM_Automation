@@ -8,11 +8,11 @@ Test Template      Create Task
 *** Keywords ***
 Check Task Exists
     [Arguments]    ${Subject_name}
-    Wait Until Element Is Not Visible    ${SUCCESS_ELEMENT_XPATH}    10s
+    Wait Until Element Is Not Visible    ${SUCCESS_ELEMENT_XPATH}    5s
     Click Element    ${TASK_OPTION_XPATH}
     Click Element    ${TABLE_SETTINGS_XPATH}
     Click Element    ${SUBJECT_CHECKBOX_XPATH}
-    Wait Until Element Is Visible    ${SEARCH_BAR_XPATH}      10s
+    Wait Until Element Is Visible    ${SEARCH_BAR_XPATH}      5s
     Input Text    ${SEARCH_BAR_XPATH}    ${Subject_name}
     Click Element    ${SEARCH_ICON_XPATH}
     Sleep    1s
@@ -25,7 +25,7 @@ Check Task Exists
 
 Create Task
     [Arguments]    ${SUBJECT_FIELD_TEXT}    ${COMMENTS_FIELD_TEXT}   ${MOBILE_CODE_TEXT}  ${MOBILE_NUMBER_TEXT}   ${EMAIL_TEXT}
-    Set Selenium Speed    0.2
+    Set Selenium Speed    0.1
     Log To Console    <<<Checking if Task already exists>>>
     ${Task_exists}=    Check Task Exists    ${SUBJECT_FIELD_TEXT}
 

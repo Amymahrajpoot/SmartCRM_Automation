@@ -12,7 +12,7 @@ view Task
     Log To Console    <<<Task Viewed Successfully>>>
 
     #navigating back
-    Click Element    ${BACK_IOCN_XPATH}
+    Click Element    ${BACK_ICON_XPATH}
 
 *** Test Cases ***
 Verify that the user can View Task

@@ -1,542 +1,753 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2026-08-20T11:36:38.291813" rpa="false" schemaversion="5">
-<suite id="s1" name="Login &amp; Add Task &amp; View Task">
+<robot generator="Robot 7.3.2 (Python 3.12.7 on win32)" generated="2026-08-21T10:12:30.375333" rpa="false" schemaversion="5">
+<suite id="s1" name="Login &amp; Add Task &amp; View Task &amp; Edit Task &amp; Clone Task &amp; Table Controls Task">
 <suite id="s1-s1" name="Login" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Login_Folder\Login.robot">
 <kw name="Open My Browser" owner="Login" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:36:40.135248" level="INFO">Opening browser 'Chrome' to base url 'http://172.16.2.87/login'.</msg>
+<msg time="2026-08-21T10:12:36.614424" level="INFO">Opening browser 'Chrome' to base url 'http://172.16.2.87/login'.</msg>
+<msg time="2026-08-21T10:12:45.818807" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
 <arg>http://172.16.2.87/login</arg>
 <arg>Chrome</arg>
 <arg>options=add_experimental_option("detach", True); add_experimental_option("prefs", {"autofill.profile_enabled": False, "autofill.credit_card_enabled": False, "credentials_enable_service": False, "profile.password_manager_enabled": False})</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-08-20T11:36:40.135248" elapsed="8.158651"/>
+<status status="PASS" start="2026-08-21T10:12:36.614424" elapsed="37.176360"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2026-08-21T10:13:13.816813" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:13.825123" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-08-20T11:36:48.293899" elapsed="0.096511"/>
+<status status="FAIL" start="2026-08-21T10:13:13.791788" elapsed="0.269626">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
 </kw>
-<status status="PASS" start="2026-08-20T11:36:40.134407" elapsed="8.256983"/>
+<status status="FAIL" start="2026-08-21T10:12:36.612843" elapsed="37.449314">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
 </kw>
 <test id="s1-s1-t1" name="Verify that the user can login using it.teammobile01@gmail.com and Bss@1234" line="24">
-<kw name="Login Scenario">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-08-20T11:36:50.410169" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-08-20T11:36:48.409873" elapsed="2.000296"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:36:50.411226" level="INFO">Typing text 'it.teammobile01@gmail.com' into text field '//input[@id='email']'.</msg>
-<arg>${EMAIL_FIELD_XPATH}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:36:50.410169" elapsed="0.519423"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:36:50.931127" level="INFO">Typing password into text field '//input[@id='password']'.</msg>
-<msg time="2026-08-20T11:36:51.025119" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${PASSWORD_FIELD_XPATH}</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:36:50.930191" elapsed="0.386715"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:36:51.316906" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
-<arg>${LOGIN_BUTTON_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:36:51.316906" elapsed="0.277307"/>
-</kw>
-<if>
-<branch type="IF" condition="'${email}' == 'it.teammobile01@gmail.com' and '${password}' == 'Bss@1234'">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SUCCESS_ELEMENT_XPATH}</arg>
-<arg>15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-20T11:36:51.594754" elapsed="0.777024"/>
-</kw>
-<status status="PASS" start="2026-08-20T11:36:51.594725" elapsed="0.777750"/>
-</branch>
-<branch type="ELSE">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<arg>Please check your email and password.</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:36:52.372475" elapsed="0.000555"/>
-</kw>
-<status status="NOT RUN" start="2026-08-20T11:36:52.372475" elapsed="0.000555"/>
-</branch>
-<status status="PASS" start="2026-08-20T11:36:51.594213" elapsed="0.778817"/>
-</if>
-<arg>email=it.teammobile01@gmail.com</arg>
-<arg>password=Bss@1234</arg>
-<status status="PASS" start="2026-08-20T11:36:48.408838" elapsed="3.964588"/>
-</kw>
 <doc>Test has only tag 'requirement: 42'.</doc>
 <tag>critical</tag>
 <tag>login</tag>
 <tag>smoke</tag>
-<status status="PASS" start="2026-08-20T11:36:48.392002" elapsed="3.982618"/>
+<status status="FAIL" start="2026-08-21T10:13:14.062157" elapsed="0.005372">Parent suite setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
 </test>
-<status status="PASS" start="2026-08-20T11:36:38.362224" elapsed="14.013671"/>
+<status status="FAIL" start="2026-08-21T10:12:30.454391" elapsed="43.617652">Suite setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
 </suite>
 <suite id="s1-s2" name="Add Task" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Tasks_Folder\Add_Task.robot">
 <test id="s1-s2-t1" name="Verfiy that the user can create the task using New Subject" line="117">
 <kw name="Create Task">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>0.2</arg>
+<arg>0.1</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2026-08-20T11:36:52.476867" elapsed="0.000000"/>
+<status status="PASS" start="2026-08-21T10:13:14.226480" elapsed="0.000525"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Checking if Task already exists&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-20T11:36:52.477868" elapsed="0.000000"/>
+<status status="PASS" start="2026-08-21T10:13:14.227005" elapsed="0.000547"/>
 </kw>
 <kw name="Check Task Exists">
 <kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2026-08-21T10:13:14.240585" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.243776" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
 <arg>${SUCCESS_ELEMENT_XPATH}</arg>
-<arg>10s</arg>
+<arg>5s</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2026-08-20T11:36:52.483726" elapsed="3.341689"/>
+<status status="FAIL" start="2026-08-21T10:13:14.228527" elapsed="0.104639">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:36:55.826414" level="INFO">Clicking element '//span[text()='Tasks']'.</msg>
 <arg>${TASK_OPTION_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:36:55.825415" elapsed="0.538900"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.334494" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:36:56.364859" level="INFO">Clicking element '(//span[@aria-label="setting"])[2]'.</msg>
 <arg>${TABLE_SETTINGS_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:36:56.364315" elapsed="1.502483"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.334494" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:36:57.867360" level="INFO">Clicking element '//span[text()='Subject']/ancestor::div[@role='treeitem']//span[@role='checkbox']'.</msg>
 <arg>${SUBJECT_CHECKBOX_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:36:57.866798" elapsed="0.767537"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.335537" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${SEARCH_BAR_XPATH}</arg>
-<arg>10s</arg>
+<arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-20T11:36:58.634335" elapsed="0.424488"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.335909" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:36:59.058823" level="INFO">Typing text 'New Subject' into text field '//input[@placeholder="Search..."]'.</msg>
 <arg>${SEARCH_BAR_XPATH}</arg>
 <arg>${Subject_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:36:59.058823" elapsed="1.597806"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.335909" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:37:00.657115" level="INFO">Clicking element '//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-default ant-btn-color-default ant-btn-variant-outlined ant-btn-icon-only ant-btn-compact-item ant-btn-compact-last-item ant-input-search-btn"]'.</msg>
 <arg>${SEARCH_ICON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:37:00.657115" elapsed="0.690167"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.335909" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-08-20T11:37:02.348594" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-08-20T11:37:01.347617" elapsed="1.000977"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.336548" elapsed="0.000000"/>
 </kw>
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:37:02.582393" level="INFO">${count} = 1</msg>
 <var>${count}</var>
 <arg>//a[text()='${Subject_name}']</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:37:02.348594" elapsed="0.233799"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.336548" elapsed="0.000000"/>
 </kw>
 <if>
 <branch type="IF" condition="${count} &gt; 0">
 <return>
 <value>${TRUE}</value>
-<status status="PASS" start="2026-08-20T11:37:02.583261" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.336548" elapsed="0.000000"/>
 </return>
-<status status="PASS" start="2026-08-20T11:37:02.582393" elapsed="0.000868"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.336548" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <return>
 <value>${FALSE}</value>
-<status status="NOT RUN" start="2026-08-20T11:37:02.583261" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.336548" elapsed="0.000000"/>
 </return>
-<status status="NOT RUN" start="2026-08-20T11:37:02.583261" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.336548" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2026-08-20T11:37:02.582393" elapsed="0.000868"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.336548" elapsed="0.001000"/>
 </if>
-<msg time="2026-08-20T11:37:02.584260" level="INFO">${Task_exists} = True</msg>
 <var>${Task_exists}</var>
 <arg>${SUBJECT_FIELD_TEXT}</arg>
-<status status="PASS" start="2026-08-20T11:36:52.478864" elapsed="10.105396"/>
+<status status="FAIL" start="2026-08-21T10:13:14.228527" elapsed="0.109021">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
 </kw>
 <if>
 <branch type="IF" condition="${Task_exists}">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Task with Subject name: "${SUBJECT_FIELD_TEXT}" already exists, skipping creation&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-20T11:37:02.585112" elapsed="0.000678"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.337548" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-08-20T11:37:02.584775" elapsed="0.002016"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.337548" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Task does not exist, proceeding to create&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.589011" elapsed="0.001108"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.337548" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${ADD_TASK_BTN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.590119" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.338572" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ADD_TASK_POPUP_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.590960" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.338739" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Validating Subject on Add Task popup&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.590960" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.338739" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${CREATE_RECORD_BTN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.590960" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.338739" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${VALIDATION_ERROR_MSG_XPATH}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.590960" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.338739" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Task cannot be added since Subject field is empty&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.590960" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.338739" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Adding Task Information&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.590960" elapsed="0.000998"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.339595" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${ASSIGNED_PERSON_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.592537" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.339595" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${SELECT_ASSIGNED_PERSON_XPATH}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.592971" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.339595" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_ASSIGNED_PERSON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.592971" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.339595" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SUBJECT_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.593490" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.339595" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${SUBJECT_XPATH}</arg>
 <arg>${SUBJECT_FIELD_TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.593490" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.339595" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${ASSIGNED_TO_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.593490" elapsed="0.001001"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.339595" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_ASSIGNED_TO_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.594491" elapsed="0.000571"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.340602" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${TYPE_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.595062" elapsed="0.000614"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.340602" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_TYPE_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.595833" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.340602" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${TASK_SUBTYPE_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.595833" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.341138" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_TASK_SUBTYPE_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.596600" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.341138" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${CALLTYPE_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.596600" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.341138" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_CALLTYPE_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.596600" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.341550" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${RELATED_TO_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.597663" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.341550" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_RELATED_TO_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.597663" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.341550" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${COMMENTS_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.598173" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.341550" elapsed="0.001896"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${COMMENTS_XPATH}</arg>
 <arg>${COMMENTS_FIELD_TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.598173" elapsed="0.000471"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.343446" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Adding Schedule&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.598644" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.343446" elapsed="0.000727"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${DUE_DATE_CALENDAR_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.599188" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.344254" elapsed="0.000270"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_DUE_DATE_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.599188" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.344576" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.599188" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.345116" elapsed="0.000000"/>
 </kw>
 <kw name="Get WebElement" owner="SeleniumLibrary">
 <var>${completed_date_field}</var>
 <arg>${COMPLETED_DATE_TIME_CALENDAR_XPATH}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.600257" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.345116" elapsed="0.000000"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
 <arg>arguments[0].click()</arg>
 <arg>ARGUMENTS</arg>
 <arg>${completed_date_field}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.601778" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.345116" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.602566" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.345894" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
 <var>${SELECT_COMPLETED_DATE_SCOPED_XPATH}</var>
 <arg>//div[contains(@class,'ant-picker-dropdown') and not(contains(@class,'ant-picker-dropdown-hidden'))]//td[@title='2026-08-25']</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.603450" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.345894" elapsed="0.000512"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${SELECT_COMPLETED_DATE_SCOPED_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.604452" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.346406" elapsed="0.000000"/>
 </kw>
 <kw name="Get WebElement" owner="SeleniumLibrary">
 <var>${date_cell}</var>
 <arg>${SELECT_COMPLETED_DATE_SCOPED_XPATH}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.605454" elapsed="0.000510"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.346406" elapsed="0.000000"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
 <arg>arguments[0].click()</arg>
 <arg>ARGUMENTS</arg>
 <arg>${date_cell}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.606074" elapsed="0.000422"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.346406" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_COMPLETED_HOUR_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.606496" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.346406" elapsed="0.000000"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${SELECT_COMPLETED_MINUTES_XPATH}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.606984" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.346406" elapsed="0.001011"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_COMPLETED_MINUTES_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.606984" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.347417" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_COMPLETED_SECONDS_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.607984" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.347417" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${OK_BTN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.607984" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.347417" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${REMINDER_SET_CHECKBOX_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.607984" elapsed="0.001048"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.347417" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Adding Contact Information&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.609286" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.348424" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${EMAIL_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.609286" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.348424" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${EMAIL_XPATH}</arg>
 <arg>${EMAIL_TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.609286" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.348424" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${MOBILE_CODE_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.609286" elapsed="0.000756"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.348946" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${MOBILE_CODE_XPATH}</arg>
 <arg>${MOBILE_CODE_TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.610042" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.348946" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_MOBILE_CODE_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.610042" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.349248" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${MOBILE_FIELD_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.610042" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.349248" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${MOBILE_FIELD_XPATH}</arg>
 <arg>${MOBILE_NUMBER_TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.610042" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.349248" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Adding Additional Information&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.610042" elapsed="0.001002"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.349248" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${STATUS_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.611044" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.349938" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_STATUS_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.611044" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.350476" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${PRIORITY_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.611044" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.350476" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_PRIORITY_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.611044" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.350476" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Adding Recurrence&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.612046" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.350476" elapsed="0.000981"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${CREATE_RECURR_SERIES_OF_TASKS_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.612046" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.351457" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${RECURRENCE_INTERVAL_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.612046" elapsed="0.000545"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.351678" elapsed="0.000000"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${RECURRENCE_INTERVAL_COUNTER_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.612591" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.352221" elapsed="0.000000"/>
 </kw>
 <var name="${i}"/>
-<status status="NOT RUN" start="2026-08-20T11:37:02.612591" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.351678" elapsed="0.000543"/>
 </iter>
 <var>${i}</var>
 <value>4</value>
-<status status="NOT RUN" start="2026-08-20T11:37:02.612591" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.351678" elapsed="0.000543"/>
 </for>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${REPEAT_THIS_TASK_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.612591" elapsed="0.000970"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.352221" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${SELECT_REPEAT_THIS_TASK_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.613561" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.352694" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${CREATE_RECORD_BTN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.614097" elapsed="0.000175"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.352694" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CREATE_SUCCESS_MSG_XPATH}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-08-20T11:37:02.614272" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.352694" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-08-20T11:37:02.587983" elapsed="0.026289"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.337548" elapsed="0.015146"/>
 </branch>
-<status status="PASS" start="2026-08-20T11:37:02.584260" elapsed="0.030012"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.337548" elapsed="0.015146"/>
 </if>
 <arg>SUBJECT_FIELD_TEXT=New Subject</arg>
 <arg>COMMENTS_FIELD_TEXT=Adding the Task</arg>
 <arg>MOBILE_CODE_TEXT=92</arg>
 <arg>MOBILE_NUMBER_TEXT=9238292241</arg>
 <arg>EMAIL_TEXT=testtask12@gmail.com</arg>
-<status status="PASS" start="2026-08-20T11:36:52.475851" elapsed="10.138421"/>
+<status status="FAIL" start="2026-08-21T10:13:14.224560" elapsed="0.128134">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
 </kw>
 <doc>Requirement: 42 - create the Task</doc>
 <tag>smoke</tag>
-<status status="PASS" start="2026-08-20T11:36:52.471184" elapsed="10.143898"/>
+<status status="FAIL" start="2026-08-21T10:13:14.212747" elapsed="0.140941">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
 </test>
-<status status="PASS" start="2026-08-20T11:36:52.377676" elapsed="10.238408"/>
+<status status="FAIL" start="2026-08-21T10:13:14.074617" elapsed="0.280303"/>
 </suite>
 <suite id="s1-s3" name="View Task" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Tasks_Folder\View_Task.robot">
 <test id="s1-s3-t1" name="Verify that the user can View Task" line="18">
@@ -544,69 +755,1089 @@
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Viewing created Task&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-20T11:37:02.664200" elapsed="0.000999"/>
+<status status="PASS" start="2026-08-21T10:13:14.369774" elapsed="0.001079"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.1s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2026-08-20T11:37:02.666322" elapsed="0.000520"/>
+<status status="PASS" start="2026-08-21T10:13:14.370853" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:37:02.668364" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]'.</msg>
+<msg time="2026-08-21T10:13:14.371805" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]'.</msg>
+<msg time="2026-08-21T10:13:14.379425" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.382619" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
 <arg>${MORE_ICON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:37:02.667351" elapsed="0.357873"/>
+<status status="FAIL" start="2026-08-21T10:13:14.370853" elapsed="0.045944">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:37:03.026225" level="INFO">Clicking element '//li[@data-menu-id="rc-menu-uuid-view"]'.</msg>
 <arg>${VIEW_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:37:03.025224" elapsed="0.392367"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.416797" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${TASKS_PAGE_XPATH}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-08-20T11:37:03.417591" elapsed="0.292945"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.417836" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>&lt;&lt;&lt;Task Viewed Successfully&gt;&gt;&gt;</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-08-20T11:37:03.710536" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.417836" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-08-20T11:37:03.711537" level="INFO">Clicking element '(//button[@type="button"])[4]'.</msg>
-<arg>${BACK_IOCN_XPATH}</arg>
+<arg>${BACK_ICON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-08-20T11:37:03.710536" elapsed="0.460204"/>
+<status status="NOT RUN" start="2026-08-21T10:13:14.417836" elapsed="0.000508"/>
 </kw>
-<status status="PASS" start="2026-08-20T11:37:02.664200" elapsed="1.506540"/>
+<status status="FAIL" start="2026-08-21T10:13:14.369774" elapsed="0.048570">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
 </kw>
 <doc>Requirement: 42 - View Task</doc>
 <tag>critical</tag>
 <tag>smoke</tag>
-<status status="PASS" start="2026-08-20T11:37:02.663197" elapsed="1.508100"/>
+<status status="FAIL" start="2026-08-21T10:13:14.368784" elapsed="0.050131">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
 </test>
-<status status="PASS" start="2026-08-20T11:37:02.621378" elapsed="1.550920"/>
+<status status="FAIL" start="2026-08-21T10:13:14.356086" elapsed="0.063273"/>
 </suite>
-<status status="PASS" start="2026-08-20T11:36:38.295135" elapsed="25.879165"/>
+<suite id="s1-s4" name="Edit Task" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Tasks_Folder\Edit_Task.robot">
+<test id="s1-s4-t1" name="Verfiy that the user can Edit/Update the Contact" line="25">
+<kw name="Edit Task">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Editing the Task&gt;&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-21T10:13:14.452867" elapsed="0.000510"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-21T10:13:14.453377" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]'.</msg>
+<msg time="2026-08-21T10:13:14.464275" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.467293" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<arg>${MORE_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-08-21T10:13:14.453377" elapsed="0.027037">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EDIT_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.481416" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${EDIT_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.482397" elapsed="0.000250"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EDIT_TASK_POPUP_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.483429" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SELECTED_TASK_SUBTYPE_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.484416" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SELECT_EDITED_TASK_SUBTYPE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.484416" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${COMMENTS_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.485704" elapsed="0.000000"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>${COMMENTS_XPATH}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.485704" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${COMMENTS_XPATH}</arg>
+<arg>${EDITED_COMMENT_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.485704" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SELECTED_PRIORITY_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.486690" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SELECT_EDITED-PRIORITY_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.486690" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${UPDATE_RECORD_BUTTON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.487241" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Task record updated successfully!&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.489630" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${UPDATE_SUCCESS_MESSAGE_XPATH}</arg>
+<arg>5S</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.490142" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-08-21T10:13:14.451855" elapsed="0.038571">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</kw>
+<doc>Requirement: 42 - Update the Task</doc>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-08-21T10:13:14.448998" elapsed="0.054848">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</test>
+<status status="FAIL" start="2026-08-21T10:13:14.423818" elapsed="0.081571"/>
+</suite>
+<suite id="s1-s5" name="Clone Task" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Tasks_Folder\Clone_Task.robot">
+<test id="s1-s5-t1" name="Verfiy that the user can Clone the Task" line="18">
+<kw name="Clone Task">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-08-21T10:13:14.554931" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-21T10:13:14.557097" level="INFO">Clicking element '(//button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only ant-dropdown-trigger"])[1]'.</msg>
+<msg time="2026-08-21T10:13:14.618350" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.619895" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<arg>${MORE_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-08-21T10:13:14.555980" elapsed="0.069671">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${CLONE_OPTION_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.627202" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CLONE_POPUP_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.644030" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${CLONE_BUTTON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.644795" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUCCESS_MESSAGE_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.645788" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Task cloned successfully!&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.645788" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BACK_ICON_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.646782" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${BACK_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.646782" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-08-21T10:13:14.554590" elapsed="0.092192">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</kw>
+<doc>Requirement: 42 - clone Task</doc>
+<tag>critical</tag>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-08-21T10:13:14.553019" elapsed="0.095097">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</test>
+<status status="FAIL" start="2026-08-21T10:13:14.506405" elapsed="0.144555"/>
+</suite>
+<suite id="s1-s6" name="Table Controls Task" source="C:\Users\AmymaUsman\PycharmProjects\SmartCRM_Automation\Tasks_Folder\Table_Controls_Task.robot">
+<test id="s1-s6-t1" name="Verify that the user can filter the task" line="37">
+<kw name="Filter Task">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Filter Task from the Tasks list&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-21T10:13:14.706459" elapsed="0.000964"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-08-21T10:13:14.707423" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-08-21T10:13:14.726820" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.727775" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<arg>${FILTERS_BUTTON_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-08-21T10:13:14.707964" elapsed="0.023167">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${FILTERS_BUTTON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.731131" elapsed="0.000999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADVANCED_FILTERS_POPUP_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.732130" elapsed="0.000545"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${ADD_CONDITION_BUTTON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.732675" elapsed="0.000600"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${FIELD_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.733471" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SELECT_FIELD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.733471" elapsed="0.000778"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${CONDITION_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.734249" elapsed="0.000976"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SELECT_CONDITION_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.735774" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${FIRST_FILTER_INPUT_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.735774" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${FIRST_FILTER_INPUT_XPATH}</arg>
+<arg>${FIRST_FILTER_INPUT_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.736279" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${ADD_CONDITION_BUTTON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.736279" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SELECT_ASSIGNED_PERSON_DROPDOWN_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.736759" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SELECT_ASSIGNED_PERSON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.736759" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${APPLY_BUTTON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.736759" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FILTERED_ROW_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.736759" elapsed="0.001002"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Row filtered successfully!&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.737761" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-08-21T10:13:14.706459" elapsed="0.031984">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</kw>
+<doc>Requirement: 42 - Filter Task</doc>
+<tag>critical</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-08-21T10:13:14.701114" elapsed="0.038201">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</test>
+<test id="s1-s6-t2" name="Verify that the user can search the task" line="42">
+<kw name="Search Task">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>&lt;&lt;&lt;Searching the Task&gt;&gt;&gt;</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-08-21T10:13:14.743432" elapsed="0.000698"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-08-21T10:13:14.744413" level="INFO">Clicking element '//input[@placeholder="Search..."]'.</msg>
+<msg time="2026-08-21T10:13:14.755532" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.755532" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<arg>${SEARCH_BAR_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-08-21T10:13:14.744413" elapsed="0.014770">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${SEARCH_BAR_XPATH}</arg>
+<arg>${SEARCH_TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.759183" elapsed="0.000505"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SEARCH_ICON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.759765" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCHED_RECORD_XPATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-08-21T10:13:14.759765" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-08-21T10:13:14.742852" elapsed="0.016913">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</kw>
+<doc>Requirement: 42 - Search task</doc>
+<tag>critical</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-08-21T10:13:14.741277" elapsed="0.019420">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</status>
+</test>
+<status status="FAIL" start="2026-08-21T10:13:14.666600" elapsed="0.095098"/>
+</suite>
+<status status="FAIL" start="2026-08-21T10:12:30.377905" elapsed="44.386316"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="7" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0" skip="0">critical</stat>
-<stat pass="1" fail="0" skip="0">login</stat>
-<stat pass="3" fail="0" skip="0">smoke</stat>
+<stat pass="0" fail="5" skip="0">critical</stat>
+<stat pass="0" fail="2" skip="0">login</stat>
+<stat pass="0" fail="7" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="Login &amp; Add Task &amp; View Task" id="s1" pass="3" fail="0" skip="0">Login &amp; Add Task &amp; View Task</stat>
-<stat name="Login" id="s1-s1" pass="1" fail="0" skip="0">Login &amp; Add Task &amp; View Task.Login</stat>
-<stat name="Add Task" id="s1-s2" pass="1" fail="0" skip="0">Login &amp; Add Task &amp; View Task.Add Task</stat>
-<stat name="View Task" id="s1-s3" pass="1" fail="0" skip="0">Login &amp; Add Task &amp; View Task.View Task</stat>
+<stat name="Login &amp; Add Task &amp; View Task &amp; Edit Task &amp; Clone Task &amp; Table Controls Task" id="s1" pass="0" fail="7" skip="0">Login &amp; Add Task &amp; View Task &amp; Edit Task &amp; Clone Task &amp; Table Controls Task</stat>
+<stat name="Login" id="s1-s1" pass="0" fail="1" skip="0">Login &amp; Add Task &amp; View Task &amp; Edit Task &amp; Clone Task &amp; Table Controls Task.Login</stat>
+<stat name="Add Task" id="s1-s2" pass="0" fail="1" skip="0">Login &amp; Add Task &amp; View Task &amp; Edit Task &amp; Clone Task &amp; Table Controls Task.Add Task</stat>
+<stat name="View Task" id="s1-s3" pass="0" fail="1" skip="0">Login &amp; Add Task &amp; View Task &amp; Edit Task &amp; Clone Task &amp; Table Controls Task.View Task</stat>
+<stat name="Edit Task" id="s1-s4" pass="0" fail="1" skip="0">Login &amp; Add Task &amp; View Task &amp; Edit Task &amp; Clone Task &amp; Table Controls Task.Edit Task</stat>
+<stat name="Clone Task" id="s1-s5" pass="0" fail="1" skip="0">Login &amp; Add Task &amp; View Task &amp; Edit Task &amp; Clone Task &amp; Table Controls Task.Clone Task</stat>
+<stat name="Table Controls Task" id="s1-s6" pass="0" fail="2" skip="0">Login &amp; Add Task &amp; View Task &amp; Edit Task &amp; Clone Task &amp; Table Controls Task.Table Controls Task</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2026-08-21T10:12:45.818807" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
+<msg time="2026-08-21T10:13:13.816813" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.240585" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.379425" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.464275" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.618350" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.726820" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
+<msg time="2026-08-21T10:13:14.755532" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff61d02abb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff61d02ac10+15210]
+	chromedriver!(No symbol) [0x7ff61cb55d6d]
+	chromedriver!(No symbol) [0x7ff61cb2cc52]
+	chromedriver!(No symbol) [0x7ff61cbe10c6]
+	chromedriver!(No symbol) [0x7ff61cbfe4f2]
+	chromedriver!(No symbol) [0x7ff61cba37cc]
+	chromedriver!(No symbol) [0x7ff61cba46f3]
+	chromedriver!GetHandleVerifier [0x7ff61d64b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff61d645ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff61d66bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff61d048ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff61d05147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff61d034d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff61d034ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff61d017d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffe1edf7374+14]
+	ntdll!RtlUserThreadStart [0x7ffe1ef3cc91+21]
+</msg>
 </errors>
 </robot>
