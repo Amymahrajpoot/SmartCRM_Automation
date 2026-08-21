@@ -35,8 +35,6 @@ Search Lead
 Add Columns
     #resetting the columns from the table settings
     Log To Console   <<<Adding Columns from the Table Settings>>>
-    #Landing on the Lead Tab
-#   Click Element    ${LEADS_XPATH}
     Click Element    ${TABLE_SETTINGS_XPATH}
     Mouse Out        ${RESET_ICON_XPATH}
     Sleep    0.5s

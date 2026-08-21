@@ -79,8 +79,14 @@ ${SEARCH_TEXT}              new subject
 ${SEARCHED_RECORD_XPATH}    //div[@class="ant-table-body"]
 
 #Table Settings
-${TABLE_SETTINGS_XPATH}     (//span[@aria-label="setting"])[2]
-${SUBJECT_CHECKBOX_XPATH}      //span[text()='Subject']/ancestor::div[@role='treeitem']//span[@role='checkbox']
+${TABLE_SETTINGS_XPATH}          (//span[@aria-label="setting"])[2]
+${RESET_ICON_XPATH}              //a[text()='Reset']
+${COLUMN_DISPLAY_XPATH}          //span[@class="ant-checkbox-label"]
+${SUBJECT_CHECKBOX_XPATH}        //span[text()='Subject']/ancestor::div[@role='treeitem']//span[@role='checkbox']
+${CALL_TYPE_CHECKBOX_XPATH}      //span[text()='Call Type']/ancestor::div[@role='treeitem']//span[@role='checkbox']
+${DUE_DATE_CHECKBOX_XPATH}       //span[text()='Due Date']/ancestor::div[@role='treeitem']//span[@role='checkbox']
+${MOBILE_CHECKBOX_XPATH}         //span[text()='Mobile']/ancestor::div[@role='treeitem']//span[@role='checkbox']
+${EMAIL_CHECKOX_XPATH}           //span[text()='Email']/ancestor::div[@role='treeitem']//span[@role='checkbox']
 
 #Filter
 ${FILTERS_BUTTON_XPATH}              //span[@class="ant-badge css-xogyor css-var-_r_0_"]
@@ -97,4 +103,13 @@ ${SELECT_ASSIGNED_PERSON_XPATH}                    //div[text()='Admin User']
 ${APPLY_BUTTON_XPATH}                              //button[@class="ant-btn css-xogyor css-var-_r_0_ ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"]
 ${FILTERED_ROW_XPATH}                              //div[@class="ant-table-body"]
 
+#Pagination
+${NEXT_ARROW_XPATH}         //li[@title="Next Page"]
+${PREV_ARROW_XPATH}         //li[@title="Previous Page"]
+${ROW_PER_PAGE_XPATH}       //div[@title="20 / page"]
+${SELECT_ROW_PER_PAGE_XPATH}    //div[text()='10 / page']
+
+#Full Screen
+${FULL_SCREEN_XPATH}        //span[@class="anticon anticon-fullscreen"]
+${EXIST_FULL_SCREEN_XPATH}      //span[@class="anticon anticon-fullscreen-exit"]
 
